@@ -1,0 +1,59 @@
+# Change Log
+All notable changes to this project will be documented in this file.
+
+
+## [Unreleased]
+### Added
+- N/A
+
+### Changed
+- N/A
+
+### Fixed
+- N/A
+
+## [3.0.1.7] - 2018-12-25
+### Refactured
+- "All": A lot of code refacturing
+
+## [3.0.0.6] - 2018-10-21
+### Added
+- Matehmatics: Percentages: Added float and decimal overloaded function
+
+### Refactured
+- ColorTools: ReverseColor --> GetComplementaryColor
+- DirectoryAndFile: Compled refactured. Class removed, converted to namespace and similar classes
+
+## [2.1.1.5] - 2018-06-13
+### Fixed
+- ConvertSize_Convert: - decimals: Didn't work
+
+## [2.1.0.4] - 2018-02-05
+### Added
+- ConvertSize_SetComboBox
+
+## [2.0.0.3] - 2018-01-04
+### Added
+- ColorTools - IdealTextColor: Add more options
+- ColorTools: Add Brightnes
+- FolderAndFile: Check Directory access
+- RecentFiles: Add Constants
+- RecentFiles: SetRecentFilesMenue
+- clsMatehmatics.cs
+- Matehmatics: Percentages
+
+### Changed
+- clsColorTools: Renamded to ColorTools
+- clsConverter: Renamded to Converter
+- clsDirectoryAndFile: Renamded to DirectoryAndFile
+- clsRecentFiles: Renamed to RecentFiles
+- clsRecentFiles: SetFromString Creats an empty list if string is null or empthy, bevor in this case list was NULL
+- clsSerialize: Renamed to Serialize
+
+
+## [1.0.1.2] - 2016-09-25
+### Added
+- clsFolderAndFile: Copy File
+
+## [1.0.0.1] - 2016-05-25
+### Initial release
