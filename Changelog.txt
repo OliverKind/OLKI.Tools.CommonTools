@@ -12,7 +12,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - N/A
 
-## [3.0.1.7] - 2018-12-25
+## [3.1.0.7] - 2018-12-28
 ### Refactured
 - "All": A lot of code refacturing
 
