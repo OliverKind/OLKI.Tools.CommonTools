@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - N/A
 
+## [3.2.0.8] - 2018-12-30
+### Refactured
+- "All": Improved resource management
+
 ## [3.1.0.7] - 2018-12-28
 ### Refactured
 - "All": A lot of code refacturing

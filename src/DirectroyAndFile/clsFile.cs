@@ -48,13 +48,6 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         private const string DEFUALT_OPEN_FILE_TO_STRING_VALUE_IF_FILE_NOT_EXISTS = "";
         #endregion
 
-        #region Members
-        /// <summary>
-        /// Use to access resource file
-        /// </summary>
-        private static System.ComponentModel.ComponentResourceManager _resource = new System.ComponentModel.ComponentResourceManager(typeof(File));
-        #endregion
-
         #region Methods
         #region Copy
         /// <summary>
@@ -80,7 +73,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             {
                 if (!overwrite && System.IO.File.Exists(destPath))
                 {
-                    if (MessageBox.Show(string.Format(_resource.GetString("Copy_Exists_Message"), new object[] { destPath }), _resource.GetString("Copy_Exists_Caption"), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    if (MessageBox.Show(string.Format(src.DirectroyAndFile.resClsFile.Copy_Exists_Message, new object[] { destPath }), src.DirectroyAndFile.resClsFile.Copy_Exists_Caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
                         overwrite = true;
                     }
@@ -94,7 +87,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(_resource.GetString("Copy_Exception_Message"), new object[] { sourcePath, destPath, ex.Message }), _resource.GetString("Copy_Exception_Caoption"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.resClsFile.Copy_Exception_Message, new object[] { sourcePath, destPath, ex.Message }), src.DirectroyAndFile.resClsFile.Copy_Exception_Caoption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -121,7 +114,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(_resource.GetString("Create_Exception_Message"), new object[] { directoryPath + fileName, ex.Message }), _resource.GetString("Create_Exception_Caoption"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.resClsFile.Create_Exception_Message, new object[] { directoryPath + fileName, ex.Message }), src.DirectroyAndFile.resClsFile.Create_Exception_Caoption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -151,7 +144,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         {
             try
             {
-                if ((!showSecurityQuestion || MessageBox.Show(string.Format(_resource.GetString("Delete_Confirm_Message"), new object[] { path }), _resource.GetString("Delete_Confirm_Caoption"), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button3) == DialogResult.Yes) && System.IO.File.Exists(path))
+                if ((!showSecurityQuestion || MessageBox.Show(string.Format(src.DirectroyAndFile.resClsFile.Delete_Confirm_Message, new object[] { path }), src.DirectroyAndFile.resClsFile.Delete_Confirm_Caoption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button3) == DialogResult.Yes) && System.IO.File.Exists(path))
                 {
                     System.IO.File.Delete(path);
                 }
@@ -159,7 +152,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(_resource.GetString("Delete_Exception_Message"), new object[] { path, ex.Message }), _resource.GetString("Delete_Exceptionn_Caoption"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.resClsFile.Delete_Exception_Message, new object[] { path, ex.Message }), src.DirectroyAndFile.resClsFile.Delete_Exceptionn_Caoption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -200,7 +193,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(_resource.GetString("OpenToString_Exception_Message"), new object[] { path, ex.Message }), _resource.GetString("OpenToString_Exceptionn_Caoption"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.resClsFile.OpenToString_Exception_Message, new object[] { path, ex.Message }), src.DirectroyAndFile.resClsFile.OpenToString_Exceptionn_Caoption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return valueIfFileNotExists;
             }
         }

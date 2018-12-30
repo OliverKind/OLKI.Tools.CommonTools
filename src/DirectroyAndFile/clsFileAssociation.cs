@@ -54,11 +54,6 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
 
         #region Members
         /// <summary>
-        /// Use to access resource file
-        /// </summary>
-        private static System.ComponentModel.ComponentResourceManager _resource = new System.ComponentModel.ComponentResourceManager(typeof(FileAssociation));
-
-        /// <summary>
         /// An Enumeration ths specifies user types
         /// </summary>
         public enum UserType
@@ -73,7 +68,6 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             AllUser,
         }
         #endregion
-
 
         #region Methods
         #region FindApplication
@@ -121,17 +115,17 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
                 switch (lngResult)
                 {
                     case SE_ERR_FNF:
-                        throw new Exception(_resource.GetString("FindApplication_SE_ERR_FNF"));
+                        throw new Exception(src.DirectroyAndFile.resClsFileAssociation.FindApplication_SE_ERR_FNF);
                     case SE_ERR_PNF:
-                        throw new Exception(_resource.GetString("FindApplication_SE_ERR_PNF"));
+                        throw new Exception(src.DirectroyAndFile.resClsFileAssociation.FindApplication_SE_ERR_PNF);
                     case SE_ERR_ACCESSDENIED:
-                        throw new Exception(_resource.GetString("FindApplication_SE_ERR_ACCESSDENIED"));
+                        throw new Exception(src.DirectroyAndFile.resClsFileAssociation.FindApplication_SE_ERR_ACCESSDENIED);
                     case SE_ERR_OOM:
-                        throw new Exception(_resource.GetString("FindApplication_SE_ERR_OOM"));
+                        throw new Exception(src.DirectroyAndFile.resClsFileAssociation.FindApplication_SE_ERR_OOM);
                     case SE_ERR_NOASSOC:
                         if (throwExceptionIfNoAssiciation)
                         {
-                            throw new Exception(_resource.GetString("FindApplication_SE_ERR_NOASSOC"));
+                            throw new Exception(src.DirectroyAndFile.resClsFileAssociation.FindApplication_SE_ERR_NOASSOC);
                         }
                         break;
                 }
@@ -139,7 +133,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(_resource.GetString("FindApplication_Exception_Message"), new object[] { filePath, ex.Message }), _resource.GetString("FindApplication_Exception_Caption"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.resClsFileAssociation.FindApplication_Exception_Message, new object[] { filePath, ex.Message }), src.DirectroyAndFile.resClsFileAssociation.FindApplication_Exception_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return string.Empty;
             }
         }

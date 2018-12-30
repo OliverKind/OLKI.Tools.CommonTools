@@ -68,31 +68,31 @@
     <Compile Include="src\clsRecentFiles.cs" />
     <Compile Include="src\clsSerialize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\clsSerialize.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>clsSerialize.resx</DependentUpon>
-    </Compile>
     <Compile Include="src\DirectroyAndFile\clsDirectory.cs" />
-    <Compile Include="src\DirectroyAndFile\clsDirectory.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>clsDirectory.resx</DependentUpon>
-    </Compile>
     <Compile Include="src\DirectroyAndFile\clsFile.cs" />
-    <Compile Include="src\DirectroyAndFile\clsFile.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>clsFile.resx</DependentUpon>
-    </Compile>
     <Compile Include="src\DirectroyAndFile\clsFileAssociation.cs" />
-    <Compile Include="src\DirectroyAndFile\clsFileAssociation.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>clsFileAssociation.resx</DependentUpon>
-    </Compile>
     <Compile Include="src\DirectroyAndFile\clsFileSize.cs" />
     <Compile Include="src\DirectroyAndFile\clsPath.cs" />
+    <Compile Include="src\DirectroyAndFile\resClsFile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>resClsFile.resx</DependentUpon>
+    </Compile>
+    <Compile Include="src\DirectroyAndFile\resClsDirectory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>resClsDirectory.resx</DependentUpon>
+    </Compile>
+    <Compile Include="src\DirectroyAndFile\resClsFileAssociation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>resClsFileAssociation.resx</DependentUpon>
+    </Compile>
+    <Compile Include="src\resClsSerialize.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>resClsSerialize.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Changelog.txt">
@@ -104,25 +104,21 @@
     <Folder Include="installation\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="src\clsSerialize.resx">
-      <DependentUpon>clsSerialize.cs</DependentUpon>
+    <EmbeddedResource Include="src\DirectroyAndFile\resClsFile.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>clsSerialize.Designer.cs</LastGenOutput>
+      <LastGenOutput>resClsFile.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\DirectroyAndFile\clsDirectory.resx">
-      <DependentUpon>clsDirectory.cs</DependentUpon>
+    <EmbeddedResource Include="src\DirectroyAndFile\resClsDirectory.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>clsDirectory.Designer.cs</LastGenOutput>
+      <LastGenOutput>resClsDirectory.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\DirectroyAndFile\clsFile.resx">
-      <DependentUpon>clsFile.cs</DependentUpon>
+    <EmbeddedResource Include="src\DirectroyAndFile\resClsFileAssociation.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>clsFile.Designer.cs</LastGenOutput>
+      <LastGenOutput>resClsFileAssociation.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\DirectroyAndFile\clsFileAssociation.resx">
-      <DependentUpon>clsFileAssociation.cs</DependentUpon>
+    <EmbeddedResource Include="src\resClsSerialize.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>clsFileAssociation.Designer.cs</LastGenOutput>
+      <LastGenOutput>resClsSerialize.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

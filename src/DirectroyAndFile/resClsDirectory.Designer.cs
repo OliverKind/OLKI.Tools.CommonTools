@@ -22,14 +22,14 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class clsFile {
+    internal class resClsDirectory {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal clsFile() {
+        internal resClsDirectory() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OLKI.Tools.CommonTools.src.DirectroyAndFile.clsFile", typeof(clsFile).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OLKI.Tools.CommonTools.src.DirectroyAndFile.resClsDirectory", typeof(resClsDirectory).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,16 +61,28 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Datei kopieren ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Der Zugriff auf den Ordner &quot;{0}&quot; wurde verweigert.
+        ///
+        ///Meldung:
+        ///{1} ähnelt.
         /// </summary>
-        internal static string Copy_Exception_Caoption {
+        internal static string CheckAccess_Exception_Message {
             get {
-                return ResourceManager.GetString("Copy_Exception_Caoption", resourceCulture);
+                return ResourceManager.GetString("CheckAccess_Exception_Message", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Beim Kopieren der Datei &quot;{0}&quot; nach &quot;{1}&quot; ist ein Fehler aufgetreten.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Zugriff auf Ordner ähnelt.
+        /// </summary>
+        internal static string CheckAccess_Exceptionn_Caoption {
+            get {
+                return ResourceManager.GetString("CheckAccess_Exceptionn_Caoption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Beim Kopieren des Ordners &quot;{0}&quot; nach &quot;{1}&quot; ist ein Fehler aufgetreten.
         ///
         ///Fehler:
         ///{2} ähnelt.
@@ -82,25 +94,16 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Datei kopieren ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner kopieren ähnelt.
         /// </summary>
-        internal static string Copy_Exists_Caption {
+        internal static string Copy_Exceptionn_Caoption {
             get {
-                return ResourceManager.GetString("Copy_Exists_Caption", resourceCulture);
+                return ResourceManager.GetString("Copy_Exceptionn_Caoption", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Die Zieldatei &quot;{0}&quot; existiert bereits. Möchten Sie diese überschreiben? ähnelt.
-        /// </summary>
-        internal static string Copy_Exists_Message {
-            get {
-                return ResourceManager.GetString("Copy_Exists_Message", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Datei erstellen ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner erstellen ähnelt.
         /// </summary>
         internal static string Create_Exception_Caoption {
             get {
@@ -109,7 +112,7 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Die Datei &quot;{0}&quot; konnte nicht erstellt werden.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Der Ordner &quot;{0}&quot; konnte nicht erstellt werden.
         ///
         ///Fehler:
         ///{1} ähnelt.
@@ -121,7 +124,7 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Datei löschen ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner löschen ähnelt.
         /// </summary>
         internal static string Delete_Confirm_Caoption {
             get {
@@ -130,7 +133,7 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Sind Sie sich sicher das Sie die Datei &quot;{0}&quot; tatsächlich löschen möchten? ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sind Sie sich sicher das Sie den Ordner &quot;{0}&quot; tatsächlich löschen möchten? ähnelt.
         /// </summary>
         internal static string Delete_Confirm_Message {
             get {
@@ -139,7 +142,7 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Die Datei &quot;{0}&quot; konnte nicht gelöscht werden.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Der Ordner &quot;{0}&quot; konnte nicht gelöscht werden.
         ///
         ///Fehler:
         ///{1} ähnelt.
@@ -151,7 +154,7 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Datei löschen ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner löschen ähnelt.
         /// </summary>
         internal static string Delete_Exceptionn_Caoption {
             get {
@@ -160,23 +163,42 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Die Datei &quot;{0}&quot; konnte nicht geöffnet und gelesen werden.
-        ///
-        ///Fehler:
-        ///{1} ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Der Ordner &quot;{0}&quot; existiert nicht.
+        ///Möchten Sie ihn jetzt anlegen? ähnelt.
         /// </summary>
-        internal static string OpenToString_Exception_Message {
+        internal static string Open_AskCreate_Message {
             get {
-                return ResourceManager.GetString("OpenToString_Exception_Message", resourceCulture);
+                return ResourceManager.GetString("Open_AskCreate_Message", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Datei öffnen und lesen ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Der Ordner &quot;{0}&quot; konnte nicht geöffnet und gelesen werden.
+        ///
+        ///Fehler:
+        ///{1} ähnelt.
         /// </summary>
-        internal static string OpenToString_Exceptionn_Caoption {
+        internal static string Open_Exception_Message {
             get {
-                return ResourceManager.GetString("OpenToString_Exceptionn_Caoption", resourceCulture);
+                return ResourceManager.GetString("Open_Exception_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner öffnen ähnelt.
+        /// </summary>
+        internal static string Open_Exceptionn_Caoption {
+            get {
+                return ResourceManager.GetString("Open_Exceptionn_Caoption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner öffnen ähnelt.
+        /// </summary>
+        internal static string Open_ExceptionOpen_AskCreate_Caoption {
+            get {
+                return ResourceManager.GetString("Open_ExceptionOpen_AskCreate_Caoption", resourceCulture);
             }
         }
     }
