@@ -12,6 +12,11 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - N/A
 
+## [3.2.1.9] - 2019-01-01
+### Fixed
+- Project: Wrong file version number in project file and binary
+- FileAssociation.FindApplication: File not found message occours every time
+
 ## [3.2.0.8] - 2018-12-30
 ### Refactured
 - "All": Improved resource management
