@@ -105,7 +105,6 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
                 long lngResult = FindExecutable(filePath, string.Empty, objResult);
 
                 //Return application path if there is an file association
-                lngResult = SE_ERR_FNF;
                 if (lngResult > SE_FIND_MATCH)
                 {
                     return objResult.ToString();
