@@ -269,21 +269,19 @@ namespace OLKI.Tools.CommonTools
             {
                 menuItem.Visible = false;
             }
-            if (rootMenuItem != null)
+            if (this._maxLength > 0 && this._fileList.Count > 0 && rootMenuItem != null)
             {
-                rootMenuItem.Visible = false;
-                if (seperatorItem != null) seperatorItem.Visible = false;
-                if (this._maxLength > 0 && this._fileList.Count > 0)
+                bool RootAndSeperatorMenuItem_Visible = false;
+                foreach (string Item in this._fileList)
                 {
-                    foreach (string Item in this._fileList)
+                    if (!string.IsNullOrEmpty(Item))
                     {
-                        if (!string.IsNullOrEmpty(Item))
-                        {
-                            rootMenuItem.Visible = true;
-                            if (seperatorItem != null) seperatorItem.Visible = true;
-                        }
+                        RootAndSeperatorMenuItem_Visible = true;
+                        break; //Nothing more to do
                     }
                 }
+                rootMenuItem.Visible = RootAndSeperatorMenuItem_Visible;
+                if (seperatorItem != null) seperatorItem.Visible = RootAndSeperatorMenuItem_Visible;
             }
         }
         #endregion
