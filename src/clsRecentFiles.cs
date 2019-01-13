@@ -20,7 +20,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Windows.Forms;
 
 namespace OLKI.Tools.CommonTools
 {
@@ -145,8 +145,6 @@ namespace OLKI.Tools.CommonTools
                 this._fileList = new List<string>();
             }
 
-            // ------------------------------------------------------------------------------------------------------------------------
-
             int LooopStart = -1;
             if (!this._fileList.Contains(path))
             // Element IS NOT in list
@@ -174,7 +172,7 @@ namespace OLKI.Tools.CommonTools
             this._fileList[0] = path;
             if (this.Changed_Event != null)
             {
-                this.Changed_Event(this, new EventArgs());
+                Changed_Event(this, new EventArgs());
             }
         }
         #endregion
@@ -226,7 +224,7 @@ namespace OLKI.Tools.CommonTools
             }
             if (this.Changed_Event != null)
             {
-                this.Changed_Event(this, new EventArgs());
+                Changed_Event(this, new EventArgs());
             }
         }
         #endregion
@@ -235,9 +233,47 @@ namespace OLKI.Tools.CommonTools
         /// <summary>
         /// Set text, enabled and visible state of an specified menue item by an specified recent file list entry
         /// </summary>
+        /// <param name="menuItems">Specifies a list with menue item to set for recent files</param>
+        public void SetMenueItem(List<ToolStripMenuItem> menuItems)
+        {
+            this.SetMenueItem(menuItems, null);
+        }
+        /// <summary>
+        /// Set text, enabled and visible state of an specified menue item and his root item by an specified recent file list entry
+        /// </summary>
+        /// <param name="menuItems">Specifies a list with menue item to set for recent files</param>
+        /// <param name="rootMenuItem">Specifies the root menue of the menue item to set</param>
+        public void SetMenueItem(List<ToolStripMenuItem> menuItems, ToolStripMenuItem rootMenuItem)
+        {
+            this.SetMenueItem(menuItems, rootMenuItem, null);
+        }
+        /// <summary>
+        /// Set text, enabled and visible state of an specified menue item and his root item and his seperator by an specified recent file list entry
+        /// </summary>
+        /// <param name="index">Specifies the index of the recent file list item to set the menue item</param>
+        /// <param name="menuItems">Specifies a list with menue item to set for recent files</param>
+        /// <param name="rootMenuItem">Specifies the root menue of the menue item to set</param>
+        /// <param name="seperatorItem">Specifies the seperator of the root menue of the menue item to set</param>
+        public void SetMenueItem(List<ToolStripMenuItem> menuItems, ToolStripMenuItem rootMenuItem, ToolStripSeparator seperatorItem)
+        {
+            for (int i = 0; i < menuItems.Count; i++)
+            {
+                if (i == 0)
+                {
+                    this.SetMenueItem(i, menuItems[i], rootMenuItem, seperatorItem);
+                } else
+                {
+                    this.SetMenueItem(i, menuItems[i]);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Set text, enabled and visible state of an specified menue item by an specified recent file list entry
+        /// </summary>
         /// <param name="index">Specifies the index of the recent file list item to set the menue item</param>
         /// <param name="menuItem">Specifies the menue item to set</param>
-        public void SetMenueItem(int index, System.Windows.Forms.ToolStripMenuItem menuItem)
+        public void SetMenueItem(int index, ToolStripMenuItem menuItem)
         {
             this.SetMenueItem(index, menuItem, null);
         }
@@ -247,7 +283,7 @@ namespace OLKI.Tools.CommonTools
         /// <param name="index">Specifies the index of the recent file list item to set the menue item</param>
         /// <param name="menuItem">Specifies the menue item to set</param>
         /// <param name="rootMenuItem">Specifies the root menue of the menue item to set</param>
-        public void SetMenueItem(int index, System.Windows.Forms.ToolStripMenuItem menuItem, System.Windows.Forms.ToolStripMenuItem rootMenuItem)
+        public void SetMenueItem(int index, ToolStripMenuItem menuItem, ToolStripMenuItem rootMenuItem)
         {
             this.SetMenueItem(index, menuItem, rootMenuItem, null);
         }
@@ -258,7 +294,7 @@ namespace OLKI.Tools.CommonTools
         /// <param name="menuItem">Specifies the menue item to set</param>
         /// <param name="rootMenuItem">Specifies the root menue of the menue item to set</param>
         /// <param name="seperatorItem">Specifies the seperator of the root menue of the menue item to set</param>
-        public void SetMenueItem(int index, System.Windows.Forms.ToolStripMenuItem menuItem, System.Windows.Forms.ToolStripMenuItem rootMenuItem, System.Windows.Forms.ToolStripSeparator seperatorItem)
+        public void SetMenueItem(int index, System.Windows.Forms.ToolStripMenuItem menuItem, ToolStripMenuItem rootMenuItem, ToolStripSeparator seperatorItem)
         {
             if (this._maxLength > 0 && this._maxLength > index && this._fileList.Count > index && !string.IsNullOrEmpty(this._fileList[index]))
             {
