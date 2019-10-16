@@ -12,6 +12,14 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - N/A
 
+## [3.3.0.10] - 2019-10-16
+### Refactured
+- clsFileAssociation: UserType.CuttenUser --> UserType.CurrentUser
+- clsFileAssociation: Added "#if DEBUG"
+
+### Fixed
+- Wrong text at LGPL-Licence file
+
 ## [3.2.1.9] - 2019-01-01
 ### Fixed
 - Project: Wrong file version number in project file and binary
