@@ -1,8 +1,8 @@
 ﻿/*
  * Filename:        clsRecentFiles.cs
  * Created:         2017-01-04
- * Last modified:   2017-01-04
- * Copyright:       Oliver Kind - 2017
+ * Last modified:   2019-01-13
+ * Copyright:       Oliver Kind - 2019
  * License:         LGPL
  * 
  * File Content:
