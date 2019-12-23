@@ -1,5 +1,5 @@
 ﻿/*
- * RaMaDe - RawMatchAndDelete
+ * OLKI.Tools.CommonTools
  * 
  * Copyright:   Oliver Kind - 2019
  * License:     LGPL
