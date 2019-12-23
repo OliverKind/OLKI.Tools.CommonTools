@@ -16,6 +16,10 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Path: IsDrive
 
+### Refactured
+- All: File headers
+- All: Removed unused using directives
+
 
 ## [3.3.0.10] - 2019-10-16
 ### Refactured
