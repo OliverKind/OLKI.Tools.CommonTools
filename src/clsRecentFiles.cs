@@ -1,19 +1,24 @@
 ﻿/*
- * Filename:        clsRecentFiles.cs
- * Created:         2017-01-04
- * Last modified:   2019-01-13
- * Copyright:       Oliver Kind - 2019
- * License:         LGPL
+ * RaMaDe - RawMatchAndDelete
  * 
- * File Content:
- * 1. RecentFiles - Constructor
- * 2. AddToList
- * 3. GetAsString
- * 4. SetFromString
- * 5. SetMenueItem
+ * Copyright:   Oliver Kind - 2019
+ * License:     LGPL
  * 
  * Desctiption:
  * Class that provieds a recent file list and tools for it
+ * 
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the LGPL General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * LGPL General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not check the GitHub-Repository.
  * 
  * */
 

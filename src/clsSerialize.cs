@@ -1,27 +1,32 @@
 ﻿/*
- * Filename:        clsRecentFiles.cs
- * Created:         2017-01-04
- * Last modified:   2017-01-04
- * Copyright:       Oliver Kind - 2017
- * License:         LGPL
+ * RaMaDe - RawMatchAndDelete
  * 
- * File Content:
- * 1. Serialize - Constructor
- * 2. ObjectToXMLString
- * 3. ObjectToBase64String
- * 4. Base64StringToObject
- * 5. ObjectToXML
- * 6. XMLToObject
+ * Copyright:   Oliver Kind - 2019
+ * License:     LGPL
  * 
  * Desctiption:
  * Class that provides tool to serialize to a file and deserialize  objects from a file
+ * 
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the LGPL General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * LGPL General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not check the GitHub-Repository.
+ * 
  * 
  * Helpfully links:
  * https://msdn.microsoft.com/de-de/library/vstudio/4abbf6k0%28v=VS.110%29.aspx
  * https://stackoverflow.com/questions/1879395/how-to-generate-a-stream-from-a-string
  * https://social.msdn.microsoft.com/Forums/en-US/5d08bc28-5b61-4c5a-8c4b-4665b1c929ea/serialize-object-to-string?forum=csharplanguage
  * http://stackoverflow.com/questions/2861722/binary-serialization-and-deserialization-without-creating-files-via-strings
- * 
+ *
  * */
 
 using System;
@@ -35,7 +40,6 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
-
 
 namespace OLKI.Tools.CommonTools
 {
