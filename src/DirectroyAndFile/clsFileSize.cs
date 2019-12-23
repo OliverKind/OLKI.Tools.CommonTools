@@ -23,11 +23,6 @@
  * */
 
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using Microsoft.Win32;
-using System.Text;
 using System.Windows.Forms;
 
 namespace OLKI.Tools.CommonTools.DirectoryAndFile
@@ -406,7 +401,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             {
                 foreach (string Unit in UnitPrefix_IEC)
                 {
-                    comboBox.Items.Add(Unit + (AddByteBaseName ?  "    (IEC)" : string.Empty) );
+                    comboBox.Items.Add(Unit + (AddByteBaseName ? "    (IEC)" : string.Empty));
                 }
             }
             if (byteBase == ByteBase.SI)

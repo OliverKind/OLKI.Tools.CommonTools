@@ -23,11 +23,7 @@
  * */
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using Microsoft.Win32;
-using System.Text;
 using System.Windows.Forms;
 
 namespace OLKI.Tools.CommonTools.DirectoryAndFile
@@ -205,7 +201,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(src.DirectroyAndFile.resClsDirectory.Create_Exception_Message, new object[] { path,ex.Message }), src.DirectroyAndFile.resClsDirectory.Create_Exception_Caoption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.resClsDirectory.Create_Exception_Message, new object[] { path, ex.Message }), src.DirectroyAndFile.resClsDirectory.Create_Exception_Caoption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }

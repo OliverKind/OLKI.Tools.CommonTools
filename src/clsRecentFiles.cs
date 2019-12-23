@@ -266,7 +266,8 @@ namespace OLKI.Tools.CommonTools
                 if (i == 0)
                 {
                     this.SetMenueItem(i, menuItems[i], rootMenuItem, seperatorItem);
-                } else
+                }
+                else
                 {
                     this.SetMenueItem(i, menuItems[i]);
                 }

@@ -30,10 +30,7 @@
  * */
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Windows.Forms;
@@ -276,7 +273,7 @@ namespace OLKI.Tools.CommonTools
                 return valueIfNull;
             }
         }
-        
+
         /// <summary>
         /// Return the value as integer type of an specified element in an specified XElement or valueIfNull if the element was not found
         /// </summary>
