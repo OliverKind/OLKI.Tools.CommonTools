@@ -31,14 +31,51 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         #region Methods
         #region Repair
         /// <summary>
-        /// Repairs the specified file path by removing wrong escape sequences and emend wrong path seperators. Convertes \\ to \ and / to \
+        /// Repairs the specified path by removing wrong escape sequences and emend wrong path seperators. Convertes \\ to \ and / to \
         /// </summary>
-        /// <param name="path">An null-terminated string that specifies the path to repair</param>
+        /// <param name="path">An string that specifies the path to repair</param>
+        /// <returns>The corrected path</returns>
         public static string Repair(string path)
         {
             path = path.Replace(@"/", @"\");
             path = path.Replace(@"\\", @"\");
             return path;
+        }
+        #endregion
+
+        #region IsDrive
+        /// <summary>
+        /// Check if the specified path is an drive
+        /// </summary>
+        /// <param name="path">An string that specifies the path to check if it is an drive</param>
+        /// <returns>True if the direcotry is an drive</returns>
+        public static bool IsDrive(string path)
+        {
+            try
+            {
+                return IsDrive(new DirectoryInfo(path));
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Check if the specified path is an drive
+        /// </summary>
+        /// <param name="path">An DirectoryInfo that specifies the direcotry  to check if it is an drive</param>
+        /// <returns>True if the direcotry is an drive</returns>
+        public static bool IsDrive(DirectoryInfo directory)
+        {
+            try
+            {
+                return new System.IO.DriveInfo(directory.Root.Name).Name == directory.FullName;
+            }
+            catch
+            {
+                return false;
+            }
         }
         #endregion
         #endregion
