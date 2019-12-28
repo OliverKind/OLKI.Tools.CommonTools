@@ -39,6 +39,7 @@ namespace OLKI.Tools.CommonTools
         #endregion
 
         #region Methodes
+        #region Percentage
         /// <summary>
         /// Calculate the percentage value from a diven Quotation and a basic value
         /// </summary>
@@ -159,6 +160,44 @@ namespace OLKI.Tools.CommonTools
                 return 0;
             }
         }
+        #endregion
+
+        #region Remaining Time
+        /// <summary>
+        /// Calculates the remaining time for an process, depenting on the elapsed time
+        /// </summary>
+        /// <param name="elapsedTime">Time elapsed for the actual progress</param>
+        /// <param name="progressValue">Actual progress value</param>
+        /// <param name="totalValueToFinish">Progress value to finish</param>
+        /// <returns>The remining time to process all, or zero if the process values are NULL</returns>
+        public static TimeSpan RemainingTime(TimeSpan elapsedTime, long? progressValue, long? totalValueToFinish)
+        {
+            if (progressValue is null || totalValueToFinish is null) return new TimeSpan();
+            return RemainingTime(elapsedTime, (double)progressValue, (double)totalValueToFinish);
+        }
+        /// <summary>
+        /// Calculates the remaining time for an process, depenting on the elapsed time
+        /// </summary>
+        /// <param name="elapsedTime">Time elapsed for the actual progress</param>
+        /// <param name="progressValue">Actual progress value</param>
+        /// <param name="totalValueToFinish">Progress value to finish</param>
+        /// <returns>The remining time to process all</returns>
+        public static TimeSpan RemainingTime(TimeSpan elapsedTime, long progressValue, long totalValueToFinish)
+        {
+            return RemainingTime(elapsedTime, progressValue, totalValueToFinish);
+        }
+        /// <summary>
+        /// Calculates the remaining time for an process, depenting on the elapsed time
+        /// </summary>
+        /// <param name="elapsedTime">Time elapsed for the actual progress</param>
+        /// <param name="progressValue">Actual progress value</param>
+        /// <param name="totalValueToFinish">Progress value to finish</param>
+        /// <returns>The remining time to process all</returns>
+        public static TimeSpan RemainingTime(TimeSpan elapsedTime, double progressValue, double totalValueToFinish)
+        {
+            return new TimeSpan(0, 0, 0, 0, Convert.ToInt32(elapsedTime.TotalMilliseconds / progressValue * (totalValueToFinish - progressValue)));
+        }
+        #endregion
         #endregion
     }
 }
