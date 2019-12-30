@@ -150,7 +150,7 @@ namespace OLKI.Tools.CommonTools
                 this._fileList = new List<string>();
             }
 
-            int LooopStart = -1;
+            int LooopStart;
             if (!this._fileList.Contains(path))
             // Element IS NOT in list
             {
@@ -300,7 +300,7 @@ namespace OLKI.Tools.CommonTools
         /// <param name="menuItem">Specifies the menue item to set</param>
         /// <param name="rootMenuItem">Specifies the root menue of the menue item to set</param>
         /// <param name="seperatorItem">Specifies the seperator of the root menue of the menue item to set</param>
-        public void SetMenueItem(int index, System.Windows.Forms.ToolStripMenuItem menuItem, ToolStripMenuItem rootMenuItem, ToolStripSeparator seperatorItem)
+        public void SetMenueItem(int index, ToolStripMenuItem menuItem, ToolStripMenuItem rootMenuItem, ToolStripSeparator seperatorItem)
         {
             if (this._maxLength > 0 && this._maxLength > index && this._fileList.Count > index && !string.IsNullOrEmpty(this._fileList[index]))
             {
@@ -311,7 +311,7 @@ namespace OLKI.Tools.CommonTools
             {
                 menuItem.Visible = false;
             }
-            if (this._maxLength > 0 && this._fileList.Count > 0 && rootMenuItem != null)
+            if (rootMenuItem != null)
             {
                 bool RootAndSeperatorMenuItem_Visible = false;
                 foreach (string Item in this._fileList)
