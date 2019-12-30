@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - N/A
 
+## [5.0.1.13] - 2019-12-30
+### Fixex
+- clsRecentFiles.cs: Not hidden menue elements
+
 ## [5.0.0.12] - 2019-12-24
 ### Added
 - HandleAttributes
