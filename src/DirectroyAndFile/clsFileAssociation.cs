@@ -117,17 +117,17 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
                 switch (lngResult)
                 {
                     case SE_ERR_FNF:
-                        throw new Exception(src.DirectroyAndFile.clsFile_StringtableAssociation.FindApplication_SE_ERR_FNF);
+                        throw new Exception(src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_SE_ERR_FNF);
                     case SE_ERR_PNF:
-                        throw new Exception(src.DirectroyAndFile.clsFile_StringtableAssociation.FindApplication_SE_ERR_PNF);
+                        throw new Exception(src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_SE_ERR_PNF);
                     case SE_ERR_ACCESSDENIED:
-                        throw new Exception(src.DirectroyAndFile.clsFile_StringtableAssociation.FindApplication_SE_ERR_ACCESSDENIED);
+                        throw new Exception(src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_SE_ERR_ACCESSDENIED);
                     case SE_ERR_OOM:
-                        throw new Exception(src.DirectroyAndFile.clsFile_StringtableAssociation.FindApplication_SE_ERR_OOM);
+                        throw new Exception(src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_SE_ERR_OOM);
                     case SE_ERR_NOASSOC:
                         if (throwExceptionIfNoAssiciation)
                         {
-                            throw new Exception(src.DirectroyAndFile.clsFile_StringtableAssociation.FindApplication_SE_ERR_NOASSOC);
+                            throw new Exception(src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_SE_ERR_NOASSOC);
                         }
                         break;
                 }
@@ -135,7 +135,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFile_StringtableAssociation.FindApplication_Exception_Message, new object[] { filePath, ex.Message }), src.DirectroyAndFile.clsFile_StringtableAssociation.FindApplication_Exception_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_Exception_Message, new object[] { filePath, ex.Message }), src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_Exception_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return string.Empty;
             }
         }

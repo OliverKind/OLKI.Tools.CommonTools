@@ -96,10 +96,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>clsDirectory.Stringtable.resx</DependentUpon>
     </Compile>
-    <Compile Include="src\DirectroyAndFile\resClsFileAssociation.Designer.cs">
+    <Compile Include="src\DirectroyAndFile\clsFileAssociation.Stringtable.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>resClsFileAssociation.resx</DependentUpon>
+      <DependentUpon>clsFileAssociation.Stringtable.resx</DependentUpon>
     </Compile>
     <Compile Include="src\clsSerialize.StringTable.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -132,9 +132,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>clsDirectory.Stringtable.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\DirectroyAndFile\resClsFileAssociation.resx">
+    <EmbeddedResource Include="src\DirectroyAndFile\clsFileAssociation.Stringtable.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>resClsFileAssociation.Designer.cs</LastGenOutput>
+      <LastGenOutput>clsFileAssociation.Stringtable.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="src\clsSerialize.StringTable.resx">
       <Generator>ResXFileCodeGenerator</Generator>
