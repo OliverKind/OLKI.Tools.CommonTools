@@ -22,14 +22,14 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class resClsFileAssociation {
+    internal class clsFile_StringtableAssociation {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal resClsFileAssociation() {
+        internal clsFile_StringtableAssociation() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OLKI.Tools.CommonTools.src.DirectroyAndFile.resClsFileAssociation", typeof(resClsFileAssociation).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OLKI.Tools.CommonTools.src.DirectroyAndFile.clsFile_StringtableAssociation", typeof(clsFile_StringtableAssociation).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
