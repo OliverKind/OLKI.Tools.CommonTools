@@ -91,10 +91,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>resClsFile.resx</DependentUpon>
     </Compile>
-    <Compile Include="src\DirectroyAndFile\resClsDirectory.Designer.cs">
+    <Compile Include="src\DirectroyAndFile\clsDirectory.Stringtable.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>resClsDirectory.resx</DependentUpon>
+      <DependentUpon>clsDirectory.Stringtable.resx</DependentUpon>
     </Compile>
     <Compile Include="src\DirectroyAndFile\resClsFileAssociation.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -128,9 +128,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>resClsFile.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\DirectroyAndFile\resClsDirectory.resx">
+    <EmbeddedResource Include="src\DirectroyAndFile\clsDirectory.Stringtable.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>resClsDirectory.Designer.cs</LastGenOutput>
+      <LastGenOutput>clsDirectory.Stringtable.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="src\DirectroyAndFile\resClsFileAssociation.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,12 +145,6 @@
     <None Include="CONTRIBUTING.md" />
     <None Include="LICENSE" />
     <None Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\OLKI.Widgets\repository\OLKI.Widgets.csproj">
-      <Project>{913126dd-a263-49aa-8f0a-b6460d0d4a1a}</Project>
-      <Name>OLKI.Widgets</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
