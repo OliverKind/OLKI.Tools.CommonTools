@@ -74,6 +74,18 @@
     <Compile Include="src\DirectroyAndFile\clsFileSize.cs" />
     <Compile Include="src\DirectroyAndFile\clsHAndleAttributes.cs" />
     <Compile Include="src\DirectroyAndFile\clsPath.cs" />
+    <Compile Include="src\DirectroyAndFile\HandleExistingFiles\clsHandleExistingFiles.cs" />
+    <Compile Include="src\DirectroyAndFile\HandleExistingFiles\frmHandleExistingFilesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\DirectroyAndFile\HandleExistingFiles\frmHandleExistingFilesForm.Designer.cs">
+      <DependentUpon>frmHandleExistingFilesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\DirectroyAndFile\HandleExistingFiles\Stringtable.Designer.cs">
+      <DependentUpon>Stringtable.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="src\DirectroyAndFile\resClsFile.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -105,6 +117,13 @@
     <Folder Include="installation\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="src\DirectroyAndFile\HandleExistingFiles\frmHandleExistingFilesForm.resx">
+      <DependentUpon>frmHandleExistingFilesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\DirectroyAndFile\HandleExistingFiles\Stringtable.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Stringtable.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\DirectroyAndFile\resClsFile.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>resClsFile.Designer.cs</LastGenOutput>
@@ -126,6 +145,12 @@
     <None Include="CONTRIBUTING.md" />
     <None Include="LICENSE" />
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\OLKI.Widgets\repository\OLKI.Widgets.csproj">
+      <Project>{913126dd-a263-49aa-8f0a-b6460d0d4a1a}</Project>
+      <Name>OLKI.Widgets</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
