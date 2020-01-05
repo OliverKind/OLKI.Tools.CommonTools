@@ -184,7 +184,19 @@ namespace OLKI.Tools.CommonTools
         /// <returns>The remining time to process all</returns>
         public static TimeSpan RemainingTime(TimeSpan elapsedTime, long progressValue, long totalValueToFinish)
         {
-            return RemainingTime(elapsedTime, progressValue, totalValueToFinish);
+            return RemainingTime(elapsedTime, progressValue, totalValueToFinish, out _);
+        }
+        /// <summary>
+        /// Calculates the remaining time for an process, depenting on the elapsed time
+        /// </summary>
+        /// <param name="elapsedTime">Time elapsed for the actual progress</param>
+        /// <param name="progressValue">Actual progress value</param>
+        /// <param name="totalValueToFinish">Progress value to finish</param>
+        /// <param name="exception">Exception during calculation</param>
+        /// <returns>The remining time to process all</returns>
+        public static TimeSpan RemainingTime(TimeSpan elapsedTime, long progressValue, long totalValueToFinish, out Exception exception )
+        {
+            return RemainingTime(elapsedTime, (double)progressValue, (double)totalValueToFinish, out exception);
         }
         /// <summary>
         /// Calculates the remaining time for an process, depenting on the elapsed time
@@ -195,7 +207,27 @@ namespace OLKI.Tools.CommonTools
         /// <returns>The remining time to process all</returns>
         public static TimeSpan RemainingTime(TimeSpan elapsedTime, double progressValue, double totalValueToFinish)
         {
-            return new TimeSpan(0, 0, 0, 0, Convert.ToInt32(elapsedTime.TotalMilliseconds / progressValue * (totalValueToFinish - progressValue)));
+            return RemainingTime(elapsedTime, progressValue, totalValueToFinish, out _);
+        }
+        /// <summary>
+        /// Calculates the remaining time for an process, depenting on the elapsed time
+        /// </summary>
+        /// <param name="elapsedTime">Time elapsed for the actual progress</param>
+        /// <param name="progressValue">Actual progress value</param>
+        /// <param name="totalValueToFinish">Progress value to finish</param>
+        /// <param name="exception">Exception during calculation</param>
+        /// <returns>The remining time to process all</returns>
+        public static TimeSpan RemainingTime(TimeSpan elapsedTime, double progressValue, double totalValueToFinish, out Exception exception)
+        {
+            exception = null;
+            try
+            {
+                return new TimeSpan(0, 0, 0, 0, Convert.ToInt32(elapsedTime.TotalMilliseconds / progressValue * (totalValueToFinish - progressValue)));
+            } catch(Exception ex)
+            {
+                exception = ex;
+                return new TimeSpan();
+            }
         }
         #endregion
         #endregion
