@@ -194,7 +194,7 @@ namespace OLKI.Tools.CommonTools
         /// <param name="totalValueToFinish">Progress value to finish</param>
         /// <param name="exception">Exception during calculation</param>
         /// <returns>The remining time to process all</returns>
-        public static TimeSpan RemainingTime(TimeSpan elapsedTime, long progressValue, long totalValueToFinish, out Exception exception )
+        public static TimeSpan RemainingTime(TimeSpan elapsedTime, long progressValue, long totalValueToFinish, out Exception exception)
         {
             return RemainingTime(elapsedTime, (double)progressValue, (double)totalValueToFinish, out exception);
         }
@@ -223,7 +223,8 @@ namespace OLKI.Tools.CommonTools
             try
             {
                 return new TimeSpan(0, 0, 0, 0, Convert.ToInt32(elapsedTime.TotalMilliseconds / progressValue * (totalValueToFinish - progressValue)));
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 exception = ex;
                 return new TimeSpan();
