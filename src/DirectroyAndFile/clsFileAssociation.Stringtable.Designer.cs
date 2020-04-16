@@ -70,9 +70,8 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Fehler beim finden der Dateizuordnung von {0}
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fehler beim Finden der Dateizuordnung von {0}
         ///
-        ///Fehlermledung:
         ///{1} ähnelt.
         /// </summary>
         internal static string FindApplication_Exception_Message {
@@ -109,7 +108,7 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Dem System steht nicht genug Resourcen oder zu wenig Arbeitsspeicher zur Verfügung. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Dem System stehen nicht genug Ressourcen oder zu wenig Arbeitsspeicher zur Verfügung. ähnelt.
         /// </summary>
         internal static string FindApplication_SE_ERR_OOM {
             get {

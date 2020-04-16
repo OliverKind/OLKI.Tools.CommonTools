@@ -121,30 +121,27 @@
     <value>Deserialisieren von Daten</value>
   </data>
   <data name="Base64StringToObject_Exception_Message" xml:space="preserve">
-    <value>Fehler beim dserialisieren von Daten.
+    <value>Fehler beim Deserialisieren von Daten.
 
-Fehlermledung:
 {0}</value>
   </data>
   <data name="ObjectToXML_Exception_Caption" xml:space="preserve">
     <value>Serialisieren von Daten</value>
   </data>
   <data name="ObjectToXML_Exception_Message" xml:space="preserve">
-    <value>Fehler beim serialisieren von Daten "{0}".
+    <value>Fehler beim Serialisieren von Daten "{0}".
 
 Nach:
 {1}
 
-Fehlermledung:
 {2}</value>
   </data>
   <data name="XMLToObject_Exception_Caption" xml:space="preserve">
     <value>Deserialisieren von Daten</value>
   </data>
   <data name="XMLToObject_Exception_Message" xml:space="preserve">
-    <value>Fehler beim dserialisieren der Datei "{0}".
+    <value>Fehler beim Deserialisieren der Datei "{0}".
 
-Fehlermledung:
 {1}</value>
   </data>
 </root>

@@ -70,9 +70,8 @@ namespace OLKI.Tools.CommonTools.src {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Fehler beim dserialisieren von Daten.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fehler beim Deserialisieren von Daten.
         ///
-        ///Fehlermledung:
         ///{0} ähnelt.
         /// </summary>
         internal static string Base64StringToObject_Exception_Message {
@@ -91,12 +90,11 @@ namespace OLKI.Tools.CommonTools.src {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Fehler beim serialisieren von Daten &quot;{0}&quot;.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fehler beim Serialisieren von Daten &quot;{0}&quot;.
         ///
         ///Nach:
         ///{1}
         ///
-        ///Fehlermledung:
         ///{2} ähnelt.
         /// </summary>
         internal static string ObjectToXML_Exception_Message {
@@ -115,9 +113,8 @@ namespace OLKI.Tools.CommonTools.src {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Fehler beim dserialisieren der Datei &quot;{0}&quot;.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fehler beim Deserialisieren der Datei &quot;{0}&quot;.
         ///
-        ///Fehlermledung:
         ///{1} ähnelt.
         /// </summary>
         internal static string XMLToObject_Exception_Message {

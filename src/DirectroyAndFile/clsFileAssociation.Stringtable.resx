@@ -121,9 +121,8 @@
     <value>Finden von Dateizuordnungen</value>
   </data>
   <data name="FindApplication_Exception_Message" xml:space="preserve">
-    <value>Fehler beim finden der Dateizuordnung von {0}
+    <value>Fehler beim Finden der Dateizuordnung von {0}
 
-Fehlermledung:
 {1}</value>
   </data>
   <data name="FindApplication_SE_ERR_ACCESSDENIED" xml:space="preserve">
@@ -136,7 +135,7 @@ Fehlermledung:
     <value>Die angebene Datei ist mit keiner Anwendung verknüpft.</value>
   </data>
   <data name="FindApplication_SE_ERR_OOM" xml:space="preserve">
-    <value>Dem System steht nicht genug Resourcen oder zu wenig Arbeitsspeicher zur Verfügung.</value>
+    <value>Dem System stehen nicht genug Ressourcen oder zu wenig Arbeitsspeicher zur Verfügung.</value>
   </data>
   <data name="FindApplication_SE_ERR_PNF" xml:space="preserve">
     <value>Der angegebene Pfad ist nicht gültig.</value>

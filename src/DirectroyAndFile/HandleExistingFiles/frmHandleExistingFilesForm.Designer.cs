@@ -163,9 +163,9 @@
             this.rabAction_OverwriteIfDifferentLengthOrNewer.AutoSize = true;
             this.rabAction_OverwriteIfDifferentLengthOrNewer.Location = new System.Drawing.Point(6, 88);
             this.rabAction_OverwriteIfDifferentLengthOrNewer.Name = "rabAction_OverwriteIfDifferentLengthOrNewer";
-            this.rabAction_OverwriteIfDifferentLengthOrNewer.Size = new System.Drawing.Size(332, 17);
+            this.rabAction_OverwriteIfDifferentLengthOrNewer.Size = new System.Drawing.Size(338, 17);
             this.rabAction_OverwriteIfDifferentLengthOrNewer.TabIndex = 3;
-            this.rabAction_OverwriteIfDifferentLengthOrNewer.Text = "Überschreiben falls Größe untrschiedlich oder Quelldatei aktueller";
+            this.rabAction_OverwriteIfDifferentLengthOrNewer.Text = "Überschreiben falls Größe unterschiedlich oder Quelldatei aktueller";
             this.rabAction_OverwriteIfDifferentLengthOrNewer.UseVisualStyleBackColor = true;
             this.rabAction_OverwriteIfDifferentLengthOrNewer.CheckedChanged += new System.EventHandler(this.rabActionXXX_CheckedChanged);
             // 
@@ -174,9 +174,9 @@
             this.rabAction_OverwriteIfDifferentLength.AutoSize = true;
             this.rabAction_OverwriteIfDifferentLength.Location = new System.Drawing.Point(6, 65);
             this.rabAction_OverwriteIfDifferentLength.Name = "rabAction_OverwriteIfDifferentLength";
-            this.rabAction_OverwriteIfDifferentLength.Size = new System.Drawing.Size(215, 17);
+            this.rabAction_OverwriteIfDifferentLength.Size = new System.Drawing.Size(221, 17);
             this.rabAction_OverwriteIfDifferentLength.TabIndex = 2;
-            this.rabAction_OverwriteIfDifferentLength.Text = "Überschreiben falls Größe untrschiedlich";
+            this.rabAction_OverwriteIfDifferentLength.Text = "Überschreiben falls Größe unterschiedlich";
             this.rabAction_OverwriteIfDifferentLength.UseVisualStyleBackColor = true;
             this.rabAction_OverwriteIfDifferentLength.CheckedChanged += new System.EventHandler(this.rabActionXXX_CheckedChanged);
             // 
@@ -196,9 +196,9 @@
             this.chkForAllFollowing.AutoSize = true;
             this.chkForAllFollowing.Location = new System.Drawing.Point(544, 211);
             this.chkForAllFollowing.Name = "chkForAllFollowing";
-            this.chkForAllFollowing.Size = new System.Drawing.Size(311, 17);
+            this.chkForAllFollowing.Size = new System.Drawing.Size(255, 17);
             this.chkForAllFollowing.TabIndex = 5;
-            this.chkForAllFollowing.Text = "Diese Aktion für zukünftige Ordner und Dateien übernehmen";
+            this.chkForAllFollowing.Text = "Diese Aktion für zukünftige Dateien übernehmen";
             this.chkForAllFollowing.UseVisualStyleBackColor = true;
             // 
             // prgSourceProperty

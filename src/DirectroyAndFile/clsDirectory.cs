@@ -281,7 +281,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         public static bool Open(string path, bool askForCreateFolder, string templatePath)
         {
             if (string.IsNullOrEmpty(path)) return false;
-            path = OLKI.Tools.CommonTools.DirectoryAndFile.Path.Repair(path);
+            path = Path.Repair(path);
 
             // Check if the directroy exists, otherwhise check if the directroy should been created
             if (!System.IO.Directory.Exists(path))

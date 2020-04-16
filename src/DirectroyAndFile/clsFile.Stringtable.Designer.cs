@@ -72,7 +72,6 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Beim Kopieren der Datei &quot;{0}&quot; nach &quot;{1}&quot; ist ein Fehler aufgetreten.
         ///
-        ///Fehler:
         ///{2} ähnelt.
         /// </summary>
         internal static string Copy_Exception_Message {
@@ -111,7 +110,6 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Die Datei &quot;{0}&quot; konnte nicht erstellt werden.
         ///
-        ///Fehler:
         ///{1} ähnelt.
         /// </summary>
         internal static string Create_Exception_Message {
@@ -130,7 +128,7 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Sind Sie sich sicher das Sie die Datei &quot;{0}&quot; tatsächlich löschen möchten? ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sind Sie sich sicher das Sie die Datei &quot;{0}&quot; unwiederruflich löschen möchten? ähnelt.
         /// </summary>
         internal static string Delete_Confirm_Message {
             get {
@@ -141,7 +139,6 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Die Datei &quot;{0}&quot; konnte nicht gelöscht werden.
         ///
-        ///Fehler:
         ///{1} ähnelt.
         /// </summary>
         internal static string Delete_Exception_Message {
@@ -162,7 +159,6 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Die Datei &quot;{0}&quot; konnte nicht geöffnet und gelesen werden.
         ///
-        ///Fehler:
         ///{1} ähnelt.
         /// </summary>
         internal static string OpenToString_Exception_Message {

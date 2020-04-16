@@ -123,7 +123,6 @@
   <data name="Copy_Exception_Message" xml:space="preserve">
     <value>Beim Kopieren der Datei "{0}" nach "{1}" ist ein Fehler aufgetreten.
 
-Fehler:
 {2}</value>
   </data>
   <data name="Copy_Exists_Caption" xml:space="preserve">
@@ -138,14 +137,13 @@ Fehler:
   <data name="Create_Exception_Message" xml:space="preserve">
     <value>Die Datei "{0}" konnte nicht erstellt werden.
 
-Fehler:
 {1}</value>
   </data>
   <data name="Delete_Confirm_Caoption" xml:space="preserve">
     <value>Datei löschen</value>
   </data>
   <data name="Delete_Confirm_Message" xml:space="preserve">
-    <value>Sind Sie sich sicher das Sie die Datei "{0}" tatsächlich löschen möchten?</value>
+    <value>Sind Sie sich sicher das Sie die Datei "{0}" unwiederruflich löschen möchten?</value>
   </data>
   <data name="Delete_Exceptionn_Caoption" xml:space="preserve">
     <value>Datei löschen</value>
@@ -153,7 +151,6 @@ Fehler:
   <data name="Delete_Exception_Message" xml:space="preserve">
     <value>Die Datei "{0}" konnte nicht gelöscht werden.
 
-Fehler:
 {1}</value>
   </data>
   <data name="OpenToString_Exceptionn_Caoption" xml:space="preserve">
@@ -162,7 +159,6 @@ Fehler:
   <data name="OpenToString_Exception_Message" xml:space="preserve">
     <value>Die Datei "{0}" konnte nicht geöffnet und gelesen werden.
 
-Fehler:
 {1}</value>
   </data>
 </root>

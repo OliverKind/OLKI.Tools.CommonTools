@@ -70,7 +70,7 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile.HandleExistingFiles {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Sie müssen einen Text angeben der an die bereits existierende Datei angehangen werden soll. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sie müssen einen Text angeben der an eine bereits existierende Datei angehangen werden soll. ähnelt.
         /// </summary>
         internal static string _0x0001m {
             get {

@@ -122,7 +122,7 @@
     <comment>OLKI.Programme.QBC.BackupProject.Process.HandleExistingFilesForm.btnOk_Click:AddTextIsEmpty.Caption</comment>
   </data>
   <data name="0x0001m" xml:space="preserve">
-    <value>Sie müssen einen Text angeben der an die bereits existierende Datei angehangen werden soll.</value>
+    <value>Sie müssen einen Text angeben der an eine bereits existierende Datei angehangen werden soll.</value>
     <comment>OLKI.Programme.QBC.BackupProject.Process.HandleExistingFilesForm.btnOk_Click:AddTextIsEmpty.Message</comment>
   </data>
 </root>
