@@ -63,9 +63,9 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Datei kopieren ähnelt.
         /// </summary>
-        internal static string Copy_Exception_Caoption {
+        internal static string _0x0001c {
             get {
-                return ResourceManager.GetString("Copy_Exception_Caoption", resourceCulture);
+                return ResourceManager.GetString("0x0001c", resourceCulture);
             }
         }
         
@@ -74,36 +74,36 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         ///
         ///{2} ähnelt.
         /// </summary>
-        internal static string Copy_Exception_Message {
+        internal static string _0x0001m {
             get {
-                return ResourceManager.GetString("Copy_Exception_Message", resourceCulture);
+                return ResourceManager.GetString("0x0001m", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Datei kopieren ähnelt.
         /// </summary>
-        internal static string Copy_Exists_Caption {
+        internal static string _0x0002c {
             get {
-                return ResourceManager.GetString("Copy_Exists_Caption", resourceCulture);
+                return ResourceManager.GetString("0x0002c", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Die Zieldatei &quot;{0}&quot; existiert bereits. Möchten Sie diese überschreiben? ähnelt.
         /// </summary>
-        internal static string Copy_Exists_Message {
+        internal static string _0x0002m {
             get {
-                return ResourceManager.GetString("Copy_Exists_Message", resourceCulture);
+                return ResourceManager.GetString("0x0002m", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Datei erstellen ähnelt.
         /// </summary>
-        internal static string Create_Exception_Caoption {
+        internal static string _0x0003c {
             get {
-                return ResourceManager.GetString("Create_Exception_Caoption", resourceCulture);
+                return ResourceManager.GetString("0x0003c", resourceCulture);
             }
         }
         
@@ -112,27 +112,36 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         ///
         ///{1} ähnelt.
         /// </summary>
-        internal static string Create_Exception_Message {
+        internal static string _0x0003m {
             get {
-                return ResourceManager.GetString("Create_Exception_Message", resourceCulture);
+                return ResourceManager.GetString("0x0003m", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Datei löschen ähnelt.
         /// </summary>
-        internal static string Delete_Confirm_Caoption {
+        internal static string _0x0004c {
             get {
-                return ResourceManager.GetString("Delete_Confirm_Caoption", resourceCulture);
+                return ResourceManager.GetString("0x0004c", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Sind Sie sich sicher das Sie die Datei &quot;{0}&quot; unwiederruflich löschen möchten? ähnelt.
         /// </summary>
-        internal static string Delete_Confirm_Message {
+        internal static string _0x0004m {
             get {
-                return ResourceManager.GetString("Delete_Confirm_Message", resourceCulture);
+                return ResourceManager.GetString("0x0004m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Datei löschen ähnelt.
+        /// </summary>
+        internal static string _0x0005c {
+            get {
+                return ResourceManager.GetString("0x0005c", resourceCulture);
             }
         }
         
@@ -141,18 +150,18 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         ///
         ///{1} ähnelt.
         /// </summary>
-        internal static string Delete_Exception_Message {
+        internal static string _0x0005m {
             get {
-                return ResourceManager.GetString("Delete_Exception_Message", resourceCulture);
+                return ResourceManager.GetString("0x0005m", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Datei löschen ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Datei öffnen und lesen ähnelt.
         /// </summary>
-        internal static string Delete_Exceptionn_Caoption {
+        internal static string _0x0006c {
             get {
-                return ResourceManager.GetString("Delete_Exceptionn_Caoption", resourceCulture);
+                return ResourceManager.GetString("0x0006c", resourceCulture);
             }
         }
         
@@ -161,18 +170,9 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         ///
         ///{1} ähnelt.
         /// </summary>
-        internal static string OpenToString_Exception_Message {
+        internal static string _0x0006m {
             get {
-                return ResourceManager.GetString("OpenToString_Exception_Message", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Datei öffnen und lesen ähnelt.
-        /// </summary>
-        internal static string OpenToString_Exceptionn_Caoption {
-            get {
-                return ResourceManager.GetString("OpenToString_Exceptionn_Caoption", resourceCulture);
+                return ResourceManager.GetString("0x0006m", resourceCulture);
             }
         }
     }

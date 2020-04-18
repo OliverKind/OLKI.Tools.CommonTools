@@ -61,110 +61,11 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Der Zugriff auf den Ordner &quot;{0}&quot; wurde verweigert.
-        ///
-        ///{1} ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner öffnen ähnelt.
         /// </summary>
-        internal static string CheckAccess_Exception_Message {
+        internal static string _0x0001c {
             get {
-                return ResourceManager.GetString("CheckAccess_Exception_Message", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Zugriff auf Ordner ähnelt.
-        /// </summary>
-        internal static string CheckAccess_Exceptionn_Caoption {
-            get {
-                return ResourceManager.GetString("CheckAccess_Exceptionn_Caoption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Beim Kopieren des Ordners &quot;{0}&quot; nach &quot;{1}&quot; ist ein Fehler aufgetreten.
-        ///
-        ///{2} ähnelt.
-        /// </summary>
-        internal static string Copy_Exception_Message {
-            get {
-                return ResourceManager.GetString("Copy_Exception_Message", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner kopieren ähnelt.
-        /// </summary>
-        internal static string Copy_Exceptionn_Caoption {
-            get {
-                return ResourceManager.GetString("Copy_Exceptionn_Caoption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner erstellen ähnelt.
-        /// </summary>
-        internal static string Create_Exception_Caoption {
-            get {
-                return ResourceManager.GetString("Create_Exception_Caoption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Der Ordner &quot;{0}&quot; konnte nicht erstellt werden.
-        ///
-        ///{1} ähnelt.
-        /// </summary>
-        internal static string Create_Exception_Message {
-            get {
-                return ResourceManager.GetString("Create_Exception_Message", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner löschen ähnelt.
-        /// </summary>
-        internal static string Delete_Confirm_Caoption {
-            get {
-                return ResourceManager.GetString("Delete_Confirm_Caoption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Sind Sie sich sicher das Sie den Ordner &quot;{0}&quot; unwiederruflich löschen möchten? ähnelt.
-        /// </summary>
-        internal static string Delete_Confirm_Message {
-            get {
-                return ResourceManager.GetString("Delete_Confirm_Message", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Der Ordner &quot;{0}&quot; konnte nicht gelöscht werden.
-        ///
-        ///{1} ähnelt.
-        /// </summary>
-        internal static string Delete_Exception_Message {
-            get {
-                return ResourceManager.GetString("Delete_Exception_Message", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner löschen ähnelt.
-        /// </summary>
-        internal static string Delete_Exceptionn_Caoption {
-            get {
-                return ResourceManager.GetString("Delete_Exceptionn_Caoption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Der Ordner &quot;{0}&quot; existiert nicht.
-        ///Möchten Sie ihn jetzt anlegen? ähnelt.
-        /// </summary>
-        internal static string Open_AskCreate_Message {
-            get {
-                return ResourceManager.GetString("Open_AskCreate_Message", resourceCulture);
+                return ResourceManager.GetString("0x0001c", resourceCulture);
             }
         }
         
@@ -173,27 +74,126 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         ///
         ///{1} ähnelt.
         /// </summary>
-        internal static string Open_Exception_Message {
+        internal static string _0x0001m {
             get {
-                return ResourceManager.GetString("Open_Exception_Message", resourceCulture);
+                return ResourceManager.GetString("0x0001m", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Ordner öffnen ähnelt.
         /// </summary>
-        internal static string Open_Exceptionn_Caoption {
+        internal static string _0x0002c {
             get {
-                return ResourceManager.GetString("Open_Exceptionn_Caoption", resourceCulture);
+                return ResourceManager.GetString("0x0002c", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner öffnen ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Der Ordner &quot;{0}&quot; existiert nicht.
+        ///Möchten Sie ihn jetzt anlegen? ähnelt.
         /// </summary>
-        internal static string Open_ExceptionOpen_AskCreate_Caoption {
+        internal static string _0x0002m {
             get {
-                return ResourceManager.GetString("Open_ExceptionOpen_AskCreate_Caoption", resourceCulture);
+                return ResourceManager.GetString("0x0002m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner löschen ähnelt.
+        /// </summary>
+        internal static string _0x0003c {
+            get {
+                return ResourceManager.GetString("0x0003c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Der Ordner &quot;{0}&quot; konnte nicht gelöscht werden.
+        ///
+        ///{1} ähnelt.
+        /// </summary>
+        internal static string _0x0003m {
+            get {
+                return ResourceManager.GetString("0x0003m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner löschen ähnelt.
+        /// </summary>
+        internal static string _0x0004c {
+            get {
+                return ResourceManager.GetString("0x0004c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sind Sie sich sicher das Sie den Ordner &quot;{0}&quot; unwiederruflich löschen möchten? ähnelt.
+        /// </summary>
+        internal static string _0x0004m {
+            get {
+                return ResourceManager.GetString("0x0004m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner erstellen ähnelt.
+        /// </summary>
+        internal static string _0x0005c {
+            get {
+                return ResourceManager.GetString("0x0005c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Der Ordner &quot;{0}&quot; konnte nicht erstellt werden.
+        ///
+        ///{1} ähnelt.
+        /// </summary>
+        internal static string _0x0005m {
+            get {
+                return ResourceManager.GetString("0x0005m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner kopieren ähnelt.
+        /// </summary>
+        internal static string _0x0006c {
+            get {
+                return ResourceManager.GetString("0x0006c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Beim Kopieren des Ordners &quot;{0}&quot; nach &quot;{1}&quot; ist ein Fehler aufgetreten.
+        ///
+        ///{2} ähnelt.
+        /// </summary>
+        internal static string _0x0006m {
+            get {
+                return ResourceManager.GetString("0x0006m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Zugriff auf Ordner ähnelt.
+        /// </summary>
+        internal static string _0x0007c {
+            get {
+                return ResourceManager.GetString("0x0007c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Der Zugriff auf den Ordner &quot;{0}&quot; wurde verweigert.
+        ///
+        ///{1} ähnelt.
+        /// </summary>
+        internal static string _0x0007m {
+            get {
+                return ResourceManager.GetString("0x0007m", resourceCulture);
             }
         }
     }

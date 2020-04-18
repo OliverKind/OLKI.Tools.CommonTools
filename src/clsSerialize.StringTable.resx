@@ -117,18 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Base64StringToObject_Exception_Caption" xml:space="preserve">
+  <data name="0x0001c" xml:space="preserve">
     <value>Deserialisieren von Daten</value>
   </data>
-  <data name="Base64StringToObject_Exception_Message" xml:space="preserve">
+  <data name="0x0001m" xml:space="preserve">
     <value>Fehler beim Deserialisieren von Daten.
 
 {0}</value>
   </data>
-  <data name="ObjectToXML_Exception_Caption" xml:space="preserve">
+  <data name="0x0002c" xml:space="preserve">
     <value>Serialisieren von Daten</value>
   </data>
-  <data name="ObjectToXML_Exception_Message" xml:space="preserve">
+  <data name="0x0002m" xml:space="preserve">
     <value>Fehler beim Serialisieren von Daten "{0}".
 
 Nach:
@@ -136,10 +136,10 @@ Nach:
 
 {2}</value>
   </data>
-  <data name="XMLToObject_Exception_Caption" xml:space="preserve">
+  <data name="0x0003c" xml:space="preserve">
     <value>Deserialisieren von Daten</value>
   </data>
-  <data name="XMLToObject_Exception_Message" xml:space="preserve">
+  <data name="0x0003m" xml:space="preserve">
     <value>Fehler beim Deserialisieren der Datei "{0}".
 
 {1}</value>

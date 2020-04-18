@@ -110,7 +110,7 @@ namespace OLKI.Tools.CommonTools
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(src.clsSerialize_StringTable.Base64StringToObject_Exception_Message, new object[] { ex.Message }), src.clsSerialize_StringTable.Base64StringToObject_Exception_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.clsSerialize_StringTable._0x0001m, new object[] { ex.Message }), src.clsSerialize_StringTable._0x0001c, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -137,7 +137,7 @@ namespace OLKI.Tools.CommonTools
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(src.clsSerialize_StringTable.ObjectToXML_Exception_Message, new object[] { toSerialize.ToString(), ptah, ex.Message }), src.clsSerialize_StringTable.ObjectToXML_Exception_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.clsSerialize_StringTable._0x0002m, new object[] { toSerialize.ToString(), ptah, ex.Message }), src.clsSerialize_StringTable._0x0002c, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -182,7 +182,7 @@ namespace OLKI.Tools.CommonTools
                 System.Diagnostics.Debug.Print(ex.Message);
                 if (showErrorMessage)
                 {
-                    MessageBox.Show(string.Format(src.clsSerialize_StringTable.XMLToObject_Exception_Message, new object[] { ptah, ex.Message }), src.clsSerialize_StringTable.XMLToObject_Exception_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(string.Format(src.clsSerialize_StringTable._0x0003m, new object[] { ptah, ex.Message }), src.clsSerialize_StringTable._0x0003c, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 return false;
             }

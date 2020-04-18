@@ -63,9 +63,9 @@ namespace OLKI.Tools.CommonTools.src {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Deserialisieren von Daten ähnelt.
         /// </summary>
-        internal static string Base64StringToObject_Exception_Caption {
+        internal static string _0x0001c {
             get {
-                return ResourceManager.GetString("Base64StringToObject_Exception_Caption", resourceCulture);
+                return ResourceManager.GetString("0x0001c", resourceCulture);
             }
         }
         
@@ -74,18 +74,18 @@ namespace OLKI.Tools.CommonTools.src {
         ///
         ///{0} ähnelt.
         /// </summary>
-        internal static string Base64StringToObject_Exception_Message {
+        internal static string _0x0001m {
             get {
-                return ResourceManager.GetString("Base64StringToObject_Exception_Message", resourceCulture);
+                return ResourceManager.GetString("0x0001m", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Serialisieren von Daten ähnelt.
         /// </summary>
-        internal static string ObjectToXML_Exception_Caption {
+        internal static string _0x0002c {
             get {
-                return ResourceManager.GetString("ObjectToXML_Exception_Caption", resourceCulture);
+                return ResourceManager.GetString("0x0002c", resourceCulture);
             }
         }
         
@@ -97,18 +97,18 @@ namespace OLKI.Tools.CommonTools.src {
         ///
         ///{2} ähnelt.
         /// </summary>
-        internal static string ObjectToXML_Exception_Message {
+        internal static string _0x0002m {
             get {
-                return ResourceManager.GetString("ObjectToXML_Exception_Message", resourceCulture);
+                return ResourceManager.GetString("0x0002m", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Deserialisieren von Daten ähnelt.
         /// </summary>
-        internal static string XMLToObject_Exception_Caption {
+        internal static string _0x0003c {
             get {
-                return ResourceManager.GetString("XMLToObject_Exception_Caption", resourceCulture);
+                return ResourceManager.GetString("0x0003c", resourceCulture);
             }
         }
         
@@ -117,9 +117,9 @@ namespace OLKI.Tools.CommonTools.src {
         ///
         ///{1} ähnelt.
         /// </summary>
-        internal static string XMLToObject_Exception_Message {
+        internal static string _0x0003m {
             get {
-                return ResourceManager.GetString("XMLToObject_Exception_Message", resourceCulture);
+                return ResourceManager.GetString("0x0003m", resourceCulture);
             }
         }
     }

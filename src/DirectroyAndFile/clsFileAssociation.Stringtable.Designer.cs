@@ -63,9 +63,9 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Finden von Dateizuordnungen ähnelt.
         /// </summary>
-        internal static string FindApplication_Exception_Caption {
+        internal static string _0x0001c {
             get {
-                return ResourceManager.GetString("FindApplication_Exception_Caption", resourceCulture);
+                return ResourceManager.GetString("0x0001c", resourceCulture);
             }
         }
         
@@ -74,9 +74,47 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         ///
         ///{1} ähnelt.
         /// </summary>
-        internal static string FindApplication_Exception_Message {
+        internal static string _0x0001m {
             get {
-                return ResourceManager.GetString("FindApplication_Exception_Message", resourceCulture);
+                return ResourceManager.GetString("0x0001m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Datei nicht verknüpft. ähnelt.
+        /// </summary>
+        internal static string _0x0002c {
+            get {
+                return ResourceManager.GetString("0x0002c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Das zur Anwendung zugehörige Dateiformat *.{0} ist nicht mit dieser Anwendung verknüpft.
+        ///
+        ///Möchten Sie es jetzt mit der Anwendung verknüpfen? ähnelt.
+        /// </summary>
+        internal static string _0x0002m {
+            get {
+                return ResourceManager.GetString("0x0002m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Datei verknüpft. ähnelt.
+        /// </summary>
+        internal static string _0x0003c {
+            get {
+                return ResourceManager.GetString("0x0003c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Das zur Anwendung zugehörige Dateiformat *.{0} ist mit dieser Anwendung verknüpft. ähnelt.
+        /// </summary>
+        internal static string _0x0003m {
+            get {
+                return ResourceManager.GetString("0x0003m", resourceCulture);
             }
         }
         

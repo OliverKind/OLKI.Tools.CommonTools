@@ -135,7 +135,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_Exception_Message, new object[] { filePath, ex.Message }), src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_Exception_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0001m, new object[] { filePath, ex.Message }), src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0001c, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return string.Empty;
             }
         }
@@ -215,7 +215,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         {
             if (!CheckMatchWithApplication(appPath, filePath))
             {
-                if (MessageBox.Show(string.Format("Das zur Anwendung zugehörige Dateiformat *.{0} ist nicht mit dieser Anwendung verknüpft.\n\nMöchten Sie es jetzt mit der Anwendung verknüpfen?", new object[] { extension }), "Datei nicht verknüpft.", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                if (MessageBox.Show(string.Format(src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0002m, new object[] { extension }), src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0002c, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     Set(appPath, extension, applicationFiletype, description, iconPath);
                 }
@@ -224,7 +224,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             {
                 if (showMessageIfFileisAccociated)
                 {
-                    MessageBox.Show(string.Format("Das zur Anwendung zugehörige Dateiformat *.{0} ist mit dieser Anwendung verknüpft.", new object[] { extension }), "Datei verknüpft.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(string.Format(src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0003m, new object[] { extension }), src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0003c, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

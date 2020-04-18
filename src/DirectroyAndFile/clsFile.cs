@@ -73,7 +73,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             {
                 if (!overwrite && System.IO.File.Exists(destPath))
                 {
-                    if (MessageBox.Show(string.Format(src.DirectroyAndFile.clsFile_Stringtable.Copy_Exists_Message, new object[] { destPath }), src.DirectroyAndFile.clsFile_Stringtable.Copy_Exists_Caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    if (MessageBox.Show(string.Format(src.DirectroyAndFile.clsFile_Stringtable._0x0002m, new object[] { destPath }), src.DirectroyAndFile.clsFile_Stringtable._0x0002c, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
                         overwrite = true;
                     }
@@ -87,7 +87,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFile_Stringtable.Copy_Exception_Message, new object[] { sourcePath, destPath, ex.Message }), src.DirectroyAndFile.clsFile_Stringtable.Copy_Exception_Caoption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFile_Stringtable._0x0001m, new object[] { sourcePath, destPath, ex.Message }), src.DirectroyAndFile.clsFile_Stringtable._0x0001c, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -114,7 +114,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFile_Stringtable.Create_Exception_Message, new object[] { directoryPath + fileName, ex.Message }), src.DirectroyAndFile.clsFile_Stringtable.Create_Exception_Caoption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFile_Stringtable._0x0003m, new object[] { directoryPath + fileName, ex.Message }), src.DirectroyAndFile.clsFile_Stringtable._0x0003c, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -144,7 +144,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         {
             try
             {
-                if ((!showSecurityQuestion || MessageBox.Show(string.Format(src.DirectroyAndFile.clsFile_Stringtable.Delete_Confirm_Message, new object[] { path }), src.DirectroyAndFile.clsFile_Stringtable.Delete_Confirm_Caoption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button3) == DialogResult.Yes) && System.IO.File.Exists(path))
+                if ((!showSecurityQuestion || MessageBox.Show(string.Format(src.DirectroyAndFile.clsFile_Stringtable._0x0004m, new object[] { path }), src.DirectroyAndFile.clsFile_Stringtable._0x0004c, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button3) == DialogResult.Yes) && System.IO.File.Exists(path))
                 {
                     System.IO.File.Delete(path);
                 }
@@ -152,7 +152,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFile_Stringtable.Delete_Exception_Message, new object[] { path, ex.Message }), src.DirectroyAndFile.clsFile_Stringtable.Delete_Exceptionn_Caoption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFile_Stringtable._0x0005m, new object[] { path, ex.Message }), src.DirectroyAndFile.clsFile_Stringtable._0x0005c, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -193,7 +193,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFile_Stringtable.OpenToString_Exception_Message, new object[] { path, ex.Message }), src.DirectroyAndFile.clsFile_Stringtable.OpenToString_Exceptionn_Caoption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFile_Stringtable._0x0006m, new object[] { path, ex.Message }), src.DirectroyAndFile.clsFile_Stringtable._0x0006c, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return valueIfFileNotExists;
             }
         }

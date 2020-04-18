@@ -117,13 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FindApplication_Exception_Caption" xml:space="preserve">
+  <data name="0x0001c" xml:space="preserve">
     <value>Finden von Dateizuordnungen</value>
   </data>
-  <data name="FindApplication_Exception_Message" xml:space="preserve">
+  <data name="0x0001m" xml:space="preserve">
     <value>Fehler beim Finden der Dateizuordnung von {0}
 
 {1}</value>
+  </data>
+  <data name="0x0002c" xml:space="preserve">
+    <value>Datei nicht verknüpft.</value>
+  </data>
+  <data name="0x0002m" xml:space="preserve">
+    <value>Das zur Anwendung zugehörige Dateiformat *.{0} ist nicht mit dieser Anwendung verknüpft.
+
+Möchten Sie es jetzt mit der Anwendung verknüpfen?</value>
+  </data>
+  <data name="0x0003c" xml:space="preserve">
+    <value>Datei verknüpft.</value>
+  </data>
+  <data name="0x0003m" xml:space="preserve">
+    <value>Das zur Anwendung zugehörige Dateiformat *.{0} ist mit dieser Anwendung verknüpft.</value>
   </data>
   <data name="FindApplication_SE_ERR_ACCESSDENIED" xml:space="preserve">
     <value>Auf die angegebene Datei konnte nicht zugegriffen werden.</value>
