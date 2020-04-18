@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - N/A
 
+## [6.2.0.6] - 2020-04-19
+### Changed
+- clsHandleExistingFiles.cs GetOverwriteByAction: Add parent form to show dialog modal
+
 ## [6.1.0.15] - 2020-04-16
 ### Changed
 - clsMatehmatics.cs RemainingTime: Add exception handling to RemainingTime
