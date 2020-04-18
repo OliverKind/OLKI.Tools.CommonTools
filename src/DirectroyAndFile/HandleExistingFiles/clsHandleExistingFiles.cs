@@ -107,6 +107,25 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         /// <returns>Should the exisiting file been overwritten, was renamend or occourded an exception</returns>
         public static CheckResult GetOverwriteByAction(FileInfo sourceFile, FileInfo targetFile, string dateFormat, HowToHandleExistingItem defaultAction, string defaultAddText, bool defaultRemember, out Exception exception)
         {
+            return GetOverwriteByAction(sourceFile, targetFile, dateFormat, defaultAction, defaultAddText, defaultRemember, out exception, null);
+        }
+        /// <summary>
+        /// Gets how to handle existing files. Show form to ask how to handle, if necessary
+        /// </summary>
+        /// <param name="sourceFile">Source file to copy</param>
+        /// <param name="targetFile">Target file to copy the data to</param>
+        /// <param name="dateFormat">Date format for adding date text to exisiting file</param>
+        /// <param name="defaultAction">Pre defined action, how to handle exisitng files</param>
+        /// <param name="defaultAddText">Default text to add to existing files</param>
+        /// <param name="defaultRemember">Default state of remember action CheckBox</param>
+        /// <param name="exception">Exception while handle existing file</param>
+        /// <param name="parentForm">Parent form to show dialog in modal mode</param>
+        /// <returns>Should the exisiting file been overwritten, was renamend or occourded an exception</returns>
+
+        private delegate void InvokeDelegate(Form parent);
+
+        public static CheckResult GetOverwriteByAction(FileInfo sourceFile, FileInfo targetFile, string dateFormat, HowToHandleExistingItem defaultAction, string defaultAddText, bool defaultRemember, out Exception exception, Form parent)
+        {
             exception = null;
             CheckResult CheckResult = new CheckResult
             {
@@ -121,7 +140,19 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             if (defaultAction == HowToHandleExistingItem.AskAnyTime)
             {
                 HandleExistingFilesForm HandleExistingFilesForm = new HandleExistingFilesForm(HandleExistingFilesForm.FormMode.FileExists, sourceFile, targetFile, defaultAction, defaultAddText, defaultRemember);
-                DialogResult FormResult = HandleExistingFilesForm.ShowDialog();
+                DialogResult FormResult; // = HandleExistingFilesForm.ShowDialog(parentForm);
+
+                if (parent != null)
+                {
+                    // Show form modal to parent form, invoke
+                    FormResult = (DialogResult)parent.Invoke((Func<DialogResult>)(() => HandleExistingFilesForm.ShowDialog()));
+
+                }
+                else
+                {
+                    // Show form with no parent form
+                    FormResult = HandleExistingFilesForm.ShowDialog();
+                }
 
                 CheckResult.FormResult = FormResult;
                 CheckResult.AddText = HandleExistingFilesForm.ActionAddTextText;
