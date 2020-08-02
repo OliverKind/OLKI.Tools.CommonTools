@@ -1,11 +1,13 @@
 ﻿/*
  * OLKI.Tools.CommonTools
  * 
- * Copyright:   Oliver Kind - 2019
+ * Copyright:   Oliver Kind - 2020
  * License:     LGPL
  * 
  * Desctiption:
  * Class that provides tool in context with colors
+ * - Is not longer maintained here
+ * - The code has been moved here: OLKI.Tools.ColorAndPicture.Color
  * 
  * 
  * This program is free software; you can redistribute it and/or modify
@@ -22,7 +24,6 @@
  * 
  * */
 
-using System;
 using System.Drawing;
 
 namespace OLKI.Tools.CommonTools
@@ -33,30 +34,7 @@ namespace OLKI.Tools.CommonTools
     public static class ColorTools
     {
         #region Constants
-        /// <summary>
-        /// Threshold for switching from dark to bright color
-        /// </summary>
-        private const double DEFAULT_IDEAL_TEXT_COLOR_THRESHOLD = 115; //128; <-- Original
-        /// <summary>
-        /// Factor red for calculating the brightnes of a color
-        /// </summary>
-        private const double DEFAULT_COLOR_BRGHTNES_FACTOR_R = 0.299;
-        /// <summary>
-        /// Factor green for calculating the brightnes of a color
-        /// </summary>
-        private const double DEFAULT_COLOR_BRGHTNES_FACTOR_G = 0.587;
-        /// <summary>
-        /// Factor blue for calculating the brightnes of a color
-        /// </summary>
-        private const double DEFAULT_COLOR_BRGHTNES_FACTOR_B = 0.114;
-        /// <summary>
-        /// Dark text color
-        /// </summary>
-        private static readonly Color DEFAULT_IDEAL_TEXT_COLOR_DARK = Color.Black;
-        /// <summary>
-        /// Bright text color
-        /// </summary>
-        private static readonly Color DEFAULT_IDEAL_TEXT_COLOR_BRIGHT = Color.White;
+        //The code has been moved here: OLKI.Tools.ColorAndPicture.Color
         #endregion
 
         #region Methods
@@ -74,7 +52,9 @@ namespace OLKI.Tools.CommonTools
         /// <returns>Ideal foreground color (black or white) based on the specified background color</returns>
         public static Color IdealTextColor(Color backgroundColor)
         {
-            return ColorTools.IdealTextColor(backgroundColor, DEFAULT_IDEAL_TEXT_COLOR_THRESHOLD);
+            //Is not longer maintained here
+            //The code has been moved here: OLKI.Tools.ColorAndPicture.Color
+            return OLKI.Tools.ColorAndPicture.Color.IdealTextColor(backgroundColor);
         }
         /// <summary>
         /// A method for programatically determining the appropriate foreground color (black or white) based on the specified background color
@@ -90,7 +70,9 @@ namespace OLKI.Tools.CommonTools
         /// <returns>Ideal foreground color (black or white) based on the specified background color</returns>
         public static Color IdealTextColor(Color backgroundColor, double threshold)
         {
-            return ColorTools.IdealTextColor(backgroundColor, DEFAULT_IDEAL_TEXT_COLOR_BRIGHT, threshold);
+            //Is not longer maintained here
+            //The code has been moved here: OLKI.Tools.ColorAndPicture.Color
+            return OLKI.Tools.ColorAndPicture.Color.IdealTextColor(backgroundColor, threshold);
         }
         /// <summary>
         /// A method for programatically determining the appropriate foreground color (black or white) based on the specified background color
@@ -106,7 +88,9 @@ namespace OLKI.Tools.CommonTools
         /// <returns>Ideal foreground color (black or white) based on the specified background color</returns>
         public static Color IdealTextColor(Color backgroundColor, Color textColorBright)
         {
-            return ColorTools.IdealTextColor(backgroundColor, textColorBright, DEFAULT_IDEAL_TEXT_COLOR_DARK, DEFAULT_IDEAL_TEXT_COLOR_THRESHOLD);
+            //Is not longer maintained here
+            //The code has been moved here: OLKI.Tools.ColorAndPicture.Color
+            return OLKI.Tools.ColorAndPicture.Color.IdealTextColor(backgroundColor, textColorBright);
         }
         /// <summary>
         /// A method for programatically determining the appropriate foreground color (black or white) based on the specified background color
@@ -123,7 +107,9 @@ namespace OLKI.Tools.CommonTools
         /// <returns>Ideal foreground color (black or white) based on the specified background color</returns>
         public static Color IdealTextColor(Color backgroundColor, Color textColorBright, double threshold)
         {
-            return ColorTools.IdealTextColor(backgroundColor, textColorBright, DEFAULT_IDEAL_TEXT_COLOR_DARK, threshold);
+            //Is not longer maintained here
+            //The code has been moved here: OLKI.Tools.ColorAndPicture.Color
+            return OLKI.Tools.ColorAndPicture.Color.IdealTextColor(backgroundColor, textColorBright, threshold);
         }
         /// <summary>
         /// A method for programatically determining the appropriate foreground color (black or white) based on the specified background color
@@ -140,7 +126,9 @@ namespace OLKI.Tools.CommonTools
         /// <returns>Ideal foreground color (black or white) based on the specified background color</returns>
         public static Color IdealTextColor(Color backgroundColor, Color textColorBright, Color textColorDark)
         {
-            return ColorTools.IdealTextColor(backgroundColor, textColorBright, textColorDark, DEFAULT_IDEAL_TEXT_COLOR_THRESHOLD);
+            //Is not longer maintained here
+            //The code has been moved here: OLKI.Tools.ColorAndPicture.Color
+            return OLKI.Tools.ColorAndPicture.Color.IdealTextColor(backgroundColor, textColorBright, textColorDark);
         }
         /// <summary>
         /// A method for programatically determining the appropriate foreground color (black or white) based on the specified background color
@@ -158,9 +146,9 @@ namespace OLKI.Tools.CommonTools
         /// <returns>Ideal foreground color (black or white) based on the specified background color</returns>
         public static Color IdealTextColor(Color backgroundColor, Color textColorBright, Color textColorDark, double threshold)
         {
-            //int BgBright = Convert.ToInt32((backgroundColor.R * DEFAULT_IDEAL_TEXT_COLOR_FACTOR_R) + (backgroundColor.G * DEFAULT_IDEAL_TEXT_COLOR_FACTOR_G) + (backgroundColor.B * DEFAULT_IDEAL_TEXT_COLOR_FACTOR_B));
-            //int BgBright = Convert.ToInt32(Math.Sqrt((Math.Pow(backgroundColor.R, 2) * DEFAULT_IDEAL_TEXT_COLOR_FACTOR_R) + (Math.Pow(backgroundColor.G, 2) * DEFAULT_IDEAL_TEXT_COLOR_FACTOR_G) + (Math.Pow(backgroundColor.B, 2) * DEFAULT_IDEAL_TEXT_COLOR_FACTOR_B)));
-            return (255 - ColorTools.Brightnes(backgroundColor) < threshold) ? textColorDark : textColorBright;
+            //Is not longer maintained here
+            //The code has been moved here: OLKI.Tools.ColorAndPicture.Color
+            return OLKI.Tools.ColorAndPicture.Color.IdealTextColor(backgroundColor, textColorBright, textColorDark, threshold);
         }
         #endregion
 
@@ -172,7 +160,9 @@ namespace OLKI.Tools.CommonTools
         /// <returns>The Brightniss of the color with an range from 0 for dark (black) an 255 for bright (white)</returns>
         public static double Brightnes(Color color)
         {
-            return ColorTools.Brightnes(color, DEFAULT_COLOR_BRGHTNES_FACTOR_B, DEFAULT_COLOR_BRGHTNES_FACTOR_G, DEFAULT_COLOR_BRGHTNES_FACTOR_R);
+            //Is not longer maintained here
+            //The code has been moved here: OLKI.Tools.ColorAndPicture.Color
+            return OLKI.Tools.ColorAndPicture.Color.Brightnes(color);
         }
         /// <summary>
         /// Get the Brightnes of an given color with default factors for red, green and blue 	pigment content
@@ -184,10 +174,9 @@ namespace OLKI.Tools.CommonTools
         /// <returns>The Brightniss of the color with an range from 0 for dark (black) an 255 for bright (white)</returns>
         public static double Brightnes(Color color, double factorBlue, double factorGreen, double factorRead)
         {
-            double FactorB = (Math.Pow(color.B, 2) * factorBlue);
-            double FactorG = (Math.Pow(color.G, 2) * factorGreen);
-            double FactorR = (Math.Pow(color.R, 2) * factorRead);
-            return Math.Sqrt(FactorB + FactorG + FactorR);
+            //Is not longer maintained here
+            //The code has been moved here: OLKI.Tools.ColorAndPicture.Color
+            return OLKI.Tools.ColorAndPicture.Color.Brightnes(color, factorBlue, factorGreen, factorRead);
         }
         #endregion
 
