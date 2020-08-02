@@ -212,7 +212,28 @@ namespace OLKI.Tools.CommonTools
         }
 
         /// <summary>
-        /// Return the value as double type of an specified element in an specified XElement or valueIfNull if the element was not found
+        /// Return the value as double type of an specified element in an specified XElement or valueIfNull if the element was not found. CultureInfo("en-US")
+        /// </summary>
+        /// <param name="input">Specifies the XElement to geht the value from</param>
+        /// <param name="elementName">Specifies the Name of the Value to get from specified XElement</param>
+        /// <param name="valueIfNull">Specifies the value to return if the specified element can not found</param>
+        /// <returns>The value of the specified element as an double type</returns>
+        public static decimal GetFromXElement(XElement input, string elementName, decimal valueIfNull)
+        {
+
+            try
+            {
+                return System.Convert.ToDecimal(input.Element(elementName).Value, new System.Globalization.CultureInfo("en-US"));
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print(ex.Message);
+                return valueIfNull;
+            }
+        }
+
+        /// <summary>
+        /// Return the value as double type of an specified element in an specified XElement or valueIfNull if the element was not found. CultureInfo("en-US")
         /// </summary>
         /// <param name="input">Specifies the XElement to geht the value from</param>
         /// <param name="elementName">Specifies the Name of the Value to get from specified XElement</param>
@@ -223,7 +244,7 @@ namespace OLKI.Tools.CommonTools
 
             try
             {
-                return System.Convert.ToDouble(input.Element(elementName).Value);
+                return System.Convert.ToDouble(input.Element(elementName).Value, new System.Globalization.CultureInfo("en-US"));
             }
             catch (Exception ex)
             {
@@ -287,6 +308,244 @@ namespace OLKI.Tools.CommonTools
             try
             {
                 return System.Convert.ToString(input.Element(elementName).Value);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print(ex.Message);
+                return valueIfNull;
+            }
+        }
+
+        /// <summary>
+        /// Return the value as integer type of an specified element in an specified XElement or valueIfNull if the element was not found
+        /// </summary>
+        /// <param name="input">Specifies the XElement to geht the value from</param>
+        /// <param name="elementName">Specifies the Name of the Value to get from specified XElement</param>
+        /// <param name="valueIfNull">Specifies the value to return if the specified element can not found</param>
+        /// <returns>The value of the specified element as an integer type</returns>
+        public static XElement GetFromXElement(XElement input, string elementName, XElement valueIfNull)
+        {
+
+            try
+            {
+                return input.Element(elementName);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print(ex.Message);
+                return valueIfNull;
+            }
+        }
+        #endregion
+
+        #region GetFromXElementAttribute
+        /// <summary>
+        /// Return the value as boolean type of an specified element in an specified XElement or valueIfNull if the element was not found
+        /// </summary>
+        /// <param name="input">Specifies the XElement to geht the value from</param>
+        /// <param name="elementName">Specifies the Name of the Value to get from specified XElement</param>
+        /// <param name="attributeName">Specifies the Name of the Attribute to get from specified XElement</param>
+        /// <param name="valueIfNull">Specifies the value to return if the specified element can not found</param>
+        /// <returns>The value of the specified element as an boolean type</returns>
+        public static bool GetFromXElementAttribute(XElement input, string elementName, string attributeName, bool valueIfNull)
+        {
+
+            try
+            {
+                return Convert.ToBoolean(input.Element(elementName).Attribute(attributeName).Value);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print(ex.Message);
+                return valueIfNull;
+            }
+        }
+
+        /// <summary>
+        /// Return the value as boolean type of an specified element in an specified XElement or valueIfNull if the element was not found
+        /// </summary>
+        /// <param name="input">Specifies the XElement to geht the value from</param>
+        /// <param name="attributeName">Specifies the Name of the Attribute to get from specified XElement</param>
+        /// <param name="valueIfNull">Specifies the value to return if the specified element can not found</param>
+        /// <returns>The value of the specified element as an boolean type</returns>
+        public static bool GetFromXElementAttribute(XElement input, string attributeName, bool valueIfNull)
+        {
+
+            try
+            {
+                return Convert.ToBoolean(input.Attribute(attributeName).Value);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print(ex.Message);
+                return valueIfNull;
+            }
+        }
+
+        /// <summary>
+        /// Return the value as double type of an specified element in an specified XElement or valueIfNull if the element was not found
+        /// </summary>
+        /// <param name="input">Specifies the XElement to geht the value from</param>
+        /// <param name="elementName">Specifies the Name of the Value to get from specified XElement</param>
+        /// <param name="attributeName">Specifies the Name of the Attribute to get from specified XElement</param>
+        /// <param name="valueIfNull">Specifies the value to return if the specified element can not found</param>
+        /// <returns>The value of the specified element as an double type</returns>
+        public static double GetFromXElementAttribute(XElement input, string elementName, string attributeName, double valueIfNull)
+        {
+
+            try
+            {
+                return Convert.ToDouble(input.Element(elementName).Attribute(attributeName).Value);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print(ex.Message);
+                return valueIfNull;
+            }
+        }
+
+        /// <summary>
+        /// Return the value as double type of an specified element in an specified XElement or valueIfNull if the element was not found
+        /// </summary>
+        /// <param name="input">Specifies the XElement to geht the value from</param>
+        /// <param name="attributeName">Specifies the Name of the Attribute to get from specified XElement</param>
+        /// <param name="valueIfNull">Specifies the value to return if the specified element can not found</param>
+        /// <returns>The value of the specified element as an double type</returns>
+        public static double GetFromXElementAttribute(XElement input, string attributeName, double valueIfNull)
+        {
+
+            try
+            {
+                return Convert.ToDouble(input.Attribute(attributeName).Value);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print(ex.Message);
+                return valueIfNull;
+            }
+        }
+
+        /// <summary>
+        /// Return the value as integer type of an specified element in an specified XElement or valueIfNull if the element was not found
+        /// </summary>
+        /// <param name="input">Specifies the XElement to geht the value from</param>
+        /// <param name="elementName">Specifies the Name of the Value to get from specified XElement</param>
+        /// <param name="attributeName">Specifies the Name of the Attribute to get from specified XElement</param>
+        /// <param name="valueIfNull">Specifies the value to return if the specified element can not found</param>
+        /// <returns>The value of the specified element as an integer type</returns>
+        public static int GetFromXElementAttribute(XElement input, string elementName, string attributeName, int valueIfNull)
+        {
+
+            try
+            {
+                return Convert.ToInt32(input.Element(elementName).Attribute(attributeName).Value);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print(ex.Message);
+                return valueIfNull;
+            }
+        }
+
+        /// <summary>
+        /// Return the value as integer type of an specified element in an specified XElement or valueIfNull if the element was not found
+        /// </summary>
+        /// <param name="input">Specifies the XElement to geht the value from</param>
+        /// <param name="attributeName">Specifies the Name of the Attribute to get from specified XElement</param>
+        /// <param name="valueIfNull">Specifies the value to return if the specified element can not found</param>
+        /// <returns>The value of the specified element as an integer type</returns>
+        public static int GetFromXElementAttribute(XElement input, string attributeName, int valueIfNull)
+        {
+
+            try
+            {
+                return Convert.ToInt32(input.Attribute(attributeName).Value);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print(ex.Message);
+                return valueIfNull;
+            }
+        }
+
+        /// <summary>
+        /// Return the value as long type of an specified element in an specified XElement or valueIfNull if the element was not found
+        /// </summary>
+        /// <param name="input">Specifies the XElement to geht the value from</param>
+        /// <param name="elementName">Specifies the Name of the Value to get from specified XElement</param>
+        /// <param name="attributeName">Specifies the Name of the Attribute to get from specified XElement</param>
+        /// <param name="valueIfNull">Specifies the value to return if the specified element can not found</param>
+        /// <returns>The value of the specified element as an long type</returns>
+        public static long GetFromXElementAttribute(XElement input, string elementName, string attributeName, long valueIfNull)
+        {
+
+            try
+            {
+                return Convert.ToInt64(input.Element(elementName).Attribute(attributeName).Value);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print(ex.Message);
+                return valueIfNull;
+            }
+        }
+
+        /// <summary>
+        /// Return the value as long type of an specified element in an specified XElement or valueIfNull if the element was not found
+        /// </summary>
+        /// <param name="input">Specifies the XElement to geht the value from</param>
+        /// <param name="attributeName">Specifies the Name of the Attribute to get from specified XElement</param>
+        /// <param name="valueIfNull">Specifies the value to return if the specified element can not found</param>
+        /// <returns>The value of the specified element as an long type</returns>
+        public static long GetFromXElementAttribute(XElement input, string attributeName, long valueIfNull)
+        {
+
+            try
+            {
+                return Convert.ToInt64(input.Attribute(attributeName).Value);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print(ex.Message);
+                return valueIfNull;
+            }
+        }
+
+        /// <summary>
+        /// Return the value as integer type of an specified element in an specified XElement or valueIfNull if the element was not found
+        /// </summary>
+        /// <param name="input">Specifies the XElement to geht the value from</param>
+        /// <param name="elementName">Specifies the Name of the Value to get from specified XElement</param>
+        /// <param name="attributeName">Specifies the Name of the Attribute to get from specified XElement</param>
+        /// <param name="valueIfNull">Specifies the value to return if the specified element can not found</param>
+        /// <returns>The value of the specified element as an integer type</returns>
+        public static string GetFromXElementAttribute(XElement input, string elementName, string attributeName, string valueIfNull)
+        {
+
+            try
+            {
+                return Convert.ToString(input.Element(elementName).Attribute(attributeName).Value);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.Print(ex.Message);
+                return valueIfNull;
+            }
+        }
+
+        /// <summary>
+        /// Return the value as integer type of an specified element in an specified XElement or valueIfNull if the element was not found
+        /// </summary>
+        /// <param name="input">Specifies the XElement to geht the value from</param>
+        /// <param name="attributeName">Specifies the Name of the Attribute to get from specified XElement</param>
+        /// <param name="valueIfNull">Specifies the value to return if the specified element can not found</param>
+        /// <returns>The value of the specified element as an integer type</returns>
+        public static string GetFromXElementAttribute(XElement input, string attributeName, string valueIfNull)
+        {
+
+            try
+            {
+                return Convert.ToString(input.Attribute(attributeName).Value);
             }
             catch (Exception ex)
             {
