@@ -116,9 +116,7 @@
     </Content>
     <Content Include="licenses\LGPL-License.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="installation\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="src\DirectroyAndFile\HandleExistingFiles\frmHandleExistingFilesForm.resx">
       <DependentUpon>frmHandleExistingFilesForm.cs</DependentUpon>
