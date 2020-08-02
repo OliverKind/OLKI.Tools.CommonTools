@@ -9,6 +9,8 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 * .NET Framework 4.7.2
+* OLKI.Tools.ColorAndPicture 1.0.0.1 or higher
+* OLKI.Widgets 5.0.0.7 or higher
 
 ### Installing
 
