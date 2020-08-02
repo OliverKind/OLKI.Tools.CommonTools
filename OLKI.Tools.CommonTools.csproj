@@ -152,6 +152,10 @@
       <Project>{913126dd-a263-49aa-8f0a-b6460d0d4a1a}</Project>
       <Name>OLKI.Widgets</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ColorAndPicture\OLKI.Tools.ColorAndPicture.csproj">
+      <Project>{2e402f8b-a952-4c82-a67b-580218a5aa11}</Project>
+      <Name>OLKI.Tools.ColorAndPicture</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

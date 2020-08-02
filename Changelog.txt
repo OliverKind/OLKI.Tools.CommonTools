@@ -12,6 +12,18 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - N/A
 
+## [7.0.0.17] - 2020-08-02
+### Added
+- Serialize: GetFromXElementAttribute
+- Serialize: GetFromXElement-->decimal Use CultureInfo("en-US")
+
+### Changed
+- ColorTools: Moved code to OLKI.Tools.ColorAndPicture.Color
+
+### Fixed
+- Serialize: Double values not read correct. Use CultureInfo("en-US")
+- Add missing Prerequisites at README.md
+
 ## [6.2.0.16] - 2020-04-19
 ### Changed
 - Required .NET-Framework set to Version 4.7.2
@@ -32,8 +44,8 @@ All notable changes to this project will be documented in this file.
 - Internal renamings
 
 ## [5.0.1.13] - 2019-12-30
-### Fixex
-- clsRecentFiles.cs: Not hidden menue elements
+### Fixed
+- RecentFiles: Not hidden menue elements
 
 ## [5.0.0.12] - 2019-12-24
 ### Added
@@ -50,8 +62,8 @@ All notable changes to this project will be documented in this file.
 
 ## [3.3.0.10] - 2019-10-16
 ### Refactured
-- clsFileAssociation: UserType.CuttenUser --> UserType.CurrentUser
-- clsFileAssociation: Added "#if DEBUG"
+- FileAssociation: UserType.CuttenUser --> UserType.CurrentUser
+- FileAssociation: Added "#if DEBUG"
 
 ### Fixed
 - Wrong text at LGPL-Licence file
@@ -106,7 +118,7 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.1.2] - 2016-09-25
 ### Added
-- clsFolderAndFile: Copy File
+- FolderAndFile: Copy File
 
 ## [1.0.0.1] - 2016-05-25
 ### Initial release
