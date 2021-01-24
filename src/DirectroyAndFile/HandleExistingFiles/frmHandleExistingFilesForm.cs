@@ -202,7 +202,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         {
             if (this.rabAction_AddText.Checked && string.IsNullOrEmpty(this.txtAction_AddText_Text.Text))
             {
-                
+
                 MessageBox.Show(src.DirectroyAndFile.HandleExistingFiles.Stringtable._0x0001m, src.DirectroyAndFile.HandleExistingFiles.Stringtable._0x0001c, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
