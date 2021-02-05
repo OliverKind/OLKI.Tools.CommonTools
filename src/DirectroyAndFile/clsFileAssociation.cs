@@ -253,14 +253,11 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         /// <param name="description">The description of the file type, as example "Textwriter Textfile"</param>
         /// <param name="iconPath">The address of a null-terminated string that specifies the icon which should be associated to the specified file type. This value can be NULL.</param>
         /// <param name="userType">An Enumeration it specifies if the fil type is associated for the specified application for all user or only for the current user</param>
-        /// <returns>True if the it was possible to associate the specified file type to the specified application or fale if not</returns>
+        /// <returns>True if the it was possible to associate the specified file type to the specified application or false if not</returns>
         public static bool Set(string appPath, string extension, string applicationFiletype, string description, string iconPath, UserType userType)
         {
-#if DEBUG
-            List<string> CreatedKeys = new List<string> { };
-#endif
-            appPath = OLKI.Tools.CommonTools.DirectoryAndFile.Path.Repair(appPath);
-            iconPath = OLKI.Tools.CommonTools.DirectoryAndFile.Path.Repair(iconPath);
+            appPath = Path.Repair(appPath);
+            iconPath = Path.Repair(iconPath);
 
             // Set fileassociation for all users
             try
@@ -269,28 +266,13 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
                 {
                     RegistryKey FileKey = Registry.LocalMachine.OpenSubKey(@"Software\Classes\", RegistryKeyPermissionCheck.ReadWriteSubTree);
                     FileKey.CreateSubKey("." + extension, RegistryKeyPermissionCheck.ReadWriteSubTree).SetValue("", applicationFiletype);
-#if DEBUG
-                    CreatedKeys.Add("Key: " + FileKey.Name + "." + extension + "    Value: " + applicationFiletype);
-#endif
 
                     RegistryKey AppKey = Registry.LocalMachine.OpenSubKey(@"Software\Classes\", RegistryKeyPermissionCheck.ReadWriteSubTree);
                     AppKey.CreateSubKey(applicationFiletype).SetValue("", description);
-#if DEBUG
-                    CreatedKeys.Add("Key: " + AppKey.Name + applicationFiletype + "    Value: " + description);
-#endif
                     AppKey = Registry.CurrentUser.OpenSubKey(@"Software\Classes\" + applicationFiletype, RegistryKeyPermissionCheck.ReadWriteSubTree);
 
-                    if (!string.IsNullOrEmpty(iconPath))
-                    {
-                        AppKey.CreateSubKey("DefaultIcon").SetValue("", iconPath);
-#if DEBUG
-                        CreatedKeys.Add("Key: " + AppKey.Name + "DefaultIcon" + "    Value: " + iconPath);
-#endif
-                    }
+                    if (!string.IsNullOrEmpty(iconPath)) AppKey.CreateSubKey("DefaultIcon").SetValue("", iconPath);
                     AppKey.CreateSubKey(@"Shell\Open\Command").SetValue("", "\"" + appPath + "\" \"%1\"");
-#if DEBUG
-                    CreatedKeys.Add("Key: " + AppKey.Name + @"Shell\Open\Command" + "    Value: " + "\"" + appPath + "\" \"%1\"");
-#endif
                 }
             }
             catch (Exception ex)
@@ -306,37 +288,22 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
                 {
                     RegistryKey FileKey = Registry.CurrentUser.OpenSubKey(@"Software\Classes\", RegistryKeyPermissionCheck.ReadWriteSubTree);
                     FileKey.CreateSubKey("." + extension, RegistryKeyPermissionCheck.ReadWriteSubTree).SetValue("", applicationFiletype);
-#if DEBUG
-                    CreatedKeys.Add("Key:\n" + FileKey.Name + "." + extension + "    Value: " + applicationFiletype);
-#endif
 
                     RegistryKey AppKey = Registry.CurrentUser.OpenSubKey(@"Software\Classes\", RegistryKeyPermissionCheck.ReadWriteSubTree);
                     AppKey.CreateSubKey(applicationFiletype).SetValue("", description);
-#if DEBUG
-                    CreatedKeys.Add("Key: " + AppKey.Name + applicationFiletype + "    Value: " + description);
-#endif
                     AppKey = Registry.CurrentUser.OpenSubKey(@"Software\Classes\" + applicationFiletype, RegistryKeyPermissionCheck.ReadWriteSubTree);
-
-                    if (!string.IsNullOrEmpty(iconPath))
-                    {
-                        AppKey.CreateSubKey("DefaultIcon").SetValue("", iconPath);
-#if DEBUG
-                        CreatedKeys.Add("Key: " + AppKey.Name + "DefaultIcon" + "    Value: " + iconPath);
-#endif
-                    }
+                    if (!string.IsNullOrEmpty(iconPath)) AppKey.CreateSubKey("DefaultIcon").SetValue("", iconPath);
                     AppKey.CreateSubKey(@"Shell\Open\Command").SetValue("", "\"" + appPath + "\" \"%1\"");
-#if DEBUG
-                    CreatedKeys.Add("Key: " + AppKey.Name + @"Shell\Open\Command" + "    Value: " + "\"" + appPath + "\" \"%1\"");
-#endif
                 }
-                MessageBox.Show(string.Format("Der Dateityp *.{0} wurde erfolgreich der Anwendung zugeordnet.\n\nMöglicherweise müssen Sie Windows neu starten bevor die Änderung aktiv wird.", new object[] { extension }), "Dateizuordnung geändert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(string.Format("Beim Verknüpfen des Dateityps *.{0}, für den aktuellen Benutzer, mit der Anwendung ist ein Fehler aufgetreten.\n\n{1}", new object[] { extension, ex.Message }), "Fehler beim ändern der Dateizuordnung", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+
+            MessageBox.Show(string.Format("Der Dateityp *.{0} wurde erfolgreich der Anwendung zugeordnet.\n\nMöglicherweise müssen Sie Windows neu starten bevor die Änderung aktiv wird.", new object[] { extension }), "Dateizuordnung geändert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return true;
         }
         #endregion
         #endregion
