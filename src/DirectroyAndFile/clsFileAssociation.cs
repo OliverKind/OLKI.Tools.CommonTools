@@ -97,15 +97,15 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         /// <summary>
         /// Find the applications it is associated by windows default to a file
         /// </summary>
-        /// <param name="filePath">The address of a null-terminated string that specifies the file to find the associated application</param>
+        /// <param name="extension">The extension or the address of a null-terminated string that specifies the file to find the associated application</param>
         /// <param name="throwExceptionIfNoAssiciation">Specifies if an exception should been thrown if ther is no filce assiciation</param>
-        /// <returns>Execution path to the application, they is associated to the file or an empty string if no application is associated</returns>
-        public static string FindApplication(string filePath, bool throwExceptionIfNoAssiciation)
+        /// <returns>Execution path to the application, they is associated to the file or an empty string if no application is association</returns>
+        public static string FindApplication(string extension, bool throwExceptionIfNoAssiciation)
         {
             try
             {
                 StringBuilder objResult = new StringBuilder(1024);
-                long lngResult = FindExecutable(filePath, string.Empty, objResult);
+                long lngResult = FindExecutable(extension, string.Empty, objResult);
 
                 //Return application path if there is an file association
                 if (lngResult > SE_FIND_MATCH)
@@ -135,7 +135,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0001m, new object[] { filePath, ex.Message }), src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0001c, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0001m, new object[] { extension, ex.Message }), src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0001c, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return string.Empty;
             }
         }
@@ -269,7 +269,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
 
                     RegistryKey AppKey = Registry.LocalMachine.OpenSubKey(@"Software\Classes\", RegistryKeyPermissionCheck.ReadWriteSubTree);
                     AppKey.CreateSubKey(applicationFiletype).SetValue("", description);
-                    AppKey = Registry.CurrentUser.OpenSubKey(@"Software\Classes\" + applicationFiletype, RegistryKeyPermissionCheck.ReadWriteSubTree);
+                    AppKey = Registry.LocalMachine.OpenSubKey(@"Software\Classes\" + applicationFiletype, RegistryKeyPermissionCheck.ReadWriteSubTree);
 
                     if (!string.IsNullOrEmpty(iconPath)) AppKey.CreateSubKey("DefaultIcon").SetValue("", iconPath);
                     AppKey.CreateSubKey(@"Shell\Open\Command").SetValue("", "\"" + appPath + "\" \"%1\"");
