@@ -150,8 +150,8 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         /// <returns>True if the defined application is associated wit  h the defined file</returns>
         public static bool CheckMatchWithApplication(string appPath, string filePath)
         {
-            appPath = OLKI.Tools.CommonTools.DirectoryAndFile.Path.Repair(appPath);
-            filePath = OLKI.Tools.CommonTools.DirectoryAndFile.Path.Repair(filePath);
+            appPath = Path.Repair(appPath);
+            filePath = Path.Repair(filePath);
 
             string FileAssociation = FindApplication(filePath);
             if (string.IsNullOrEmpty(FileAssociation) || string.IsNullOrEmpty(appPath) || string.Compare(appPath, FileAssociation, true) != 0)
@@ -277,7 +277,7 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format("Beim Verknüpfen des Dateityps *.{0}, für alle Benutzer, mit der Anwendung ist ein Fehler aufgetreten.\n\nBitte Versuchen Sie es erneut, jedoch mit Administratorrechten.\n\n{1}", new object[] { extension, ex.Message }), "Fehler beim ändern der Dateizuordnung", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0004m, new object[] { extension, ex.Message }), src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0004c, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -298,11 +298,11 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format("Beim Verknüpfen des Dateityps *.{0}, für den aktuellen Benutzer, mit der Anwendung ist ein Fehler aufgetreten.\n\n{1}", new object[] { extension, ex.Message }), "Fehler beim ändern der Dateizuordnung", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format(src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0005m, new object[] { extension, ex.Message }), src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0005c, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            MessageBox.Show(string.Format("Der Dateityp *.{0} wurde erfolgreich der Anwendung zugeordnet.\n\nMöglicherweise müssen Sie Windows neu starten bevor die Änderung aktiv wird.", new object[] { extension }), "Dateizuordnung geändert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(string.Format(src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0006m, new object[] { extension }), src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0006c, MessageBoxButtons.OK, MessageBoxIcon.Information);
             return true;
         }
         #endregion

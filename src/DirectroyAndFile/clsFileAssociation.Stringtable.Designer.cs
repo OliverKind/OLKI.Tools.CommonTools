@@ -119,6 +119,70 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fehler beim Zuordnen des Dateityps zur Anwendung ähnelt.
+        /// </summary>
+        internal static string _0x0004c {
+            get {
+                return ResourceManager.GetString("0x0004c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Beim Verknüpfen des Dateityps *.{0}, für alle Benutzer, mit der Anwendung ist ein Fehler aufgetreten.
+        ///
+        ///Falls Sie die Anwendung nicht als Administrator ausführe, versuchen Sie es bitte erneut mit Administratorrechten.
+        ///
+        ///{1} ähnelt.
+        /// </summary>
+        internal static string _0x0004m {
+            get {
+                return ResourceManager.GetString("0x0004m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fehler Zuordnen des Dateityps zur Anwendung ähnelt.
+        /// </summary>
+        internal static string _0x0005c {
+            get {
+                return ResourceManager.GetString("0x0005c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Beim Verknüpfen des Dateityps *.{0}, für den aktuellen Benutzer, mit der Anwendung ist ein Fehler aufgetreten.
+        ///
+        ///Falls Sie die Anwendung nicht als Administrator ausführe, versuchen Sie es bitte erneut mit Administratorrechten.
+        ///
+        ///{1} ähnelt.
+        /// </summary>
+        internal static string _0x0005m {
+            get {
+                return ResourceManager.GetString("0x0005m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Dateityp der Anwendung erfoglreich zugeordnet ähnelt.
+        /// </summary>
+        internal static string _0x0006c {
+            get {
+                return ResourceManager.GetString("0x0006c", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Der Dateityp *.{0} wurde erfolgreich der Anwendung zugeordnet.
+        ///
+        ///Möglicherweise müssen Sie Windows neu starten bevor die Änderung aktiv wird. ähnelt.
+        /// </summary>
+        internal static string _0x0006m {
+            get {
+                return ResourceManager.GetString("0x0006m", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Auf die angegebene Datei konnte nicht zugegriffen werden. ähnelt.
         /// </summary>
         internal static string FindApplication_SE_ERR_ACCESSDENIED {

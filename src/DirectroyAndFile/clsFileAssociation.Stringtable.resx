@@ -139,6 +139,34 @@ Möchten Sie es jetzt mit der Anwendung verknüpfen?</value>
   <data name="0x0003m" xml:space="preserve">
     <value>Das zur Anwendung zugehörige Dateiformat *.{0} ist mit dieser Anwendung verknüpft.</value>
   </data>
+  <data name="0x0004c" xml:space="preserve">
+    <value>Fehler beim Zuordnen des Dateityps zur Anwendung</value>
+  </data>
+  <data name="0x0004m" xml:space="preserve">
+    <value>Beim Verknüpfen des Dateityps *.{0}, für alle Benutzer, mit der Anwendung ist ein Fehler aufgetreten.
+
+Falls Sie die Anwendung nicht als Administrator ausführe, versuchen Sie es bitte erneut mit Administratorrechten.
+
+{1}</value>
+  </data>
+  <data name="0x0005c" xml:space="preserve">
+    <value>Fehler Zuordnen des Dateityps zur Anwendung</value>
+  </data>
+  <data name="0x0005m" xml:space="preserve">
+    <value>Beim Verknüpfen des Dateityps *.{0}, für den aktuellen Benutzer, mit der Anwendung ist ein Fehler aufgetreten.
+
+Falls Sie die Anwendung nicht als Administrator ausführe, versuchen Sie es bitte erneut mit Administratorrechten.
+
+{1}</value>
+  </data>
+  <data name="0x0006c" xml:space="preserve">
+    <value>Dateityp der Anwendung erfoglreich zugeordnet</value>
+  </data>
+  <data name="0x0006m" xml:space="preserve">
+    <value>Der Dateityp *.{0} wurde erfolgreich der Anwendung zugeordnet.
+
+Möglicherweise müssen Sie Windows neu starten bevor die Änderung aktiv wird.</value>
+  </data>
   <data name="FindApplication_SE_ERR_ACCESSDENIED" xml:space="preserve">
     <value>Auf die angegebene Datei konnte nicht zugegriffen werden.</value>
   </data>
