@@ -266,10 +266,9 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         /// <returns>The converted length</returns>
         public static string Convert(long length, uint decimals, ByteBase byteBase, Dimension dimension, bool hideUnit)
         {
-            double ConvertedLength = 0;
-            string[] Unit = { };
+            string[] Unit;
             string NumberFormat = "{0:n" + decimals.ToString() + "}";
-            string ReturnNumber = string.Empty;
+            string ReturnNumber;
 
             // Set the unit array by selected byteBase
             switch (byteBase)
@@ -289,16 +288,59 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
                 dimension = (Dimension)GetHighestDimension(length, byteBase, dimension);
             }
 
-            // Get the new length value
-            ConvertedLength = Math.Round(length / Math.Pow((double)byteBase, (double)dimension), (int)decimals);
-
             // Return new length, wit or without unit
-            ReturnNumber = string.Format(NumberFormat, ConvertedLength);
-            if (hideUnit)
-            {
-                return ReturnNumber;
-            }
+            ReturnNumber = string.Format(NumberFormat, ConvertNum(length, decimals, byteBase, dimension));
+
+            if (hideUnit) return ReturnNumber;
             return string.Format(DEFAULT_RESULT_FORMAT, new object[] { ReturnNumber, Unit[(int)dimension] });
+        }
+
+        /// <summary>
+        /// Converts a specified length to an forced dimension
+        /// </summary>
+        /// <param name="length">Specifies the length of an file in byte to convert</param>
+        /// <param name="dimension">Specifies a forced dimension to convert to</param>
+        /// <returns>The converted length</returns>
+        public static decimal ConvertNum(long length, Dimension dimension)
+        {
+            return ConvertNum(length, DEFAULT_DECIMALS, dimension);
+        }
+
+        /// <summary>
+        /// Converts a specified length to an forced dimension, an specified number of decimal digits
+        /// </summary>
+        /// <param name="length">Specifies the length of an file in byte to convert</param>
+        /// <param name="decimals">Specifies the number of decimal digits to shown in the result</param>
+        /// <param name="dimension">Specifies a forced dimension to convert to</param>
+        /// <returns>The converted length</returns>
+        public static decimal ConvertNum(long length, uint decimals, Dimension dimension)
+        {
+            return ConvertNum(length, decimals, DEFAULT_BYTE_BASE, dimension);
+        }
+
+        /// <summary>
+        /// Converts a specified length to an forced dimension, with an specified byte base
+        /// </summary>
+        /// <param name="length">Specifies the length of an file in byte to convert</param>
+        /// <param name="byteBase">Specifies the byte base for conversion</param>
+        /// <param name="dimension">Specifies a forced dimension to convert to</param>
+        /// <returns>The converted length</returns>
+        public static decimal ConvertNum(long length, ByteBase byteBase, Dimension dimension)
+        {
+            return ConvertNum(length, DEFAULT_DECIMALS, byteBase, dimension);
+        }
+
+        /// <summary>
+        /// Converts a specified length to an forced dimension, with an specified byte base, an specified number of decimal digits
+        /// </summary>
+        /// <param name="length">Specifies the length of an file in byte to convert</param>
+        /// <param name="decimals">Specifies the number of decimal digits to shown in the result</param>
+        /// <param name="byteBase">Specifies the byte base for conversion</param>
+        /// <param name="dimension">Specifies a forced dimension to convert to</param>
+        /// <returns>The converted length</returns>
+        public static decimal ConvertNum(long length, uint decimals, ByteBase byteBase, Dimension dimension)
+        {
+            return (decimal)Math.Round(length / Math.Pow((double)byteBase, (double)dimension), (int)decimals);
         }
         #endregion
 
