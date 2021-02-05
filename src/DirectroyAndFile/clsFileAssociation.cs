@@ -1,7 +1,7 @@
 ﻿/*
  * OLKI.Tools.CommonTools
  * 
- * Copyright:   Oliver Kind - 2019
+ * Copyright:   Oliver Kind - 2021
  * License:     LGPL
  * 
  * Desctiption:
@@ -24,8 +24,6 @@
 
 using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Forms;
 
 namespace OLKI.Tools.CommonTools.DirectoryAndFile
@@ -44,15 +42,6 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         /// Specifies the defaukt value if a messagebox should be shown, if a file is associated to the specified applicaiton
         /// </summary>
         private const bool DEFAULT_FILE_ASSOCIATION_SHOW_MESSAGE_IF_FILE_IS_ASSOCIATED = true;
-
-        #region return values for FindExecutableA function
-        private const int SE_ERR_FNF = 2;
-        private const int SE_ERR_PNF = 3;
-        private const int SE_ERR_ACCESSDENIED = 5;
-        private const int SE_ERR_OOM = 8;
-        private const int SE_ERR_NOASSOC = 31;
-        private const int SE_FIND_MATCH = 32;
-        #endregion
         #endregion
 
         #region Members
@@ -75,63 +64,51 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         #region Methods
         #region FindApplication
         /// <summary>
-        /// Retrieves the name of and handle to the executable (.exe) file associated with a specific document file.
-        /// </summary>
-        /// <param name="lpFile">The address of a null-terminated string that specifies a file name. This file should be a document.</param>
-        /// <param name="lpDirectory">The address of a null-terminated string that specifies the default directory. This value can be NULL.</param>
-        /// <param name="lpResult">The address of a buffer that receives the file name of the associated executable file. This file name is a null-terminated string that specifies the executable file started when an "open" by association is run on the file specified in the lpFile parameter. Put simply, this is the application that is launched when the document file is directly double-clicked or when Open is chosen from the file's shortcut menu. This parameter must contain a valid non-null value and is assumed to be of length MAX_PATH. Responsibility for validating the value is left to the programmer.</param>
-        /// <returns>Returns a value greater than 32 if successful, or a value less than or equal to 32 representing an error.</returns>
-        [System.Runtime.InteropServices.DllImport("shell32.dll", EntryPoint = "FindExecutable")]
-        private static extern long FindExecutable(string lpFile, string lpDirectory, StringBuilder lpResult);
-
-        /// <summary>
         /// Find the applications it is associated by windows default to a file. Don't throw an exception if ther is no file association.
         /// </summary>
-        /// <param name="filePath">The address of a null-terminated string that specifies the file to find the associated application</param>
-        /// <returns>Execution path to the application, they is associated to the file or an empty string if no application is associated</returns>
-        public static string FindApplication(string filePath)
+        /// <param name="extension">The extension or the address of a null-terminated string that specifies the file to find the associated application</param>
+        /// <returns>Execution path to the application, they is associated to the file or an empty string if no application is association</returns>
+        public static string FindApplication(string extension)
         {
-            return FindApplication(filePath, false);
+            return FindApplication(extension, false);
         }
 
         /// <summary>
         /// Find the applications it is associated by windows default to a file
         /// </summary>
         /// <param name="extension">The extension or the address of a null-terminated string that specifies the file to find the associated application</param>
-        /// <param name="throwExceptionIfNoAssiciation">Specifies if an exception should been thrown if ther is no filce assiciation</param>
+        /// <param name="throwExceptionIfNoAssociation">Specifies if an exception should been thrown if ther is no filce assiciation</param>
         /// <returns>Execution path to the application, they is associated to the file or an empty string if no application is association</returns>
-        public static string FindApplication(string extension, bool throwExceptionIfNoAssiciation)
+        public static string FindApplication(string extension, bool throwExceptionIfNoAssociation)
         {
             try
             {
-                StringBuilder objResult = new StringBuilder(1024);
-                long lngResult = FindExecutable(extension, string.Empty, objResult);
 
-                //Return application path if there is an file association
-                if (lngResult > SE_FIND_MATCH)
+                string AppFiletype;
+                string AssociatedApp;
+                string[] extSplit = extension.Split('.');
+
+                extension = "." + extSplit[extSplit.Length - 1];
+
+                AppFiletype = (string)Registry.GetValue(@"HKEY_CLASSES_ROOT\" + extension, "", "");
+                if (string.IsNullOrEmpty(AppFiletype))
                 {
-                    return objResult.ToString();
+                    if (throwExceptionIfNoAssociation) throw new Exception(src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_SE_ERR_NOASSOC);
+                    return string.Empty;
                 }
 
-                // Handle exceptions
-                switch (lngResult)
+                AssociatedApp = (string)Registry.GetValue(@"HKEY_CLASSES_ROOT\" + AppFiletype + @"\Shell\Open\Command", "", "");
+                AssociatedApp = AssociatedApp.Replace("%1", "");
+                AssociatedApp = AssociatedApp.Replace("\"", "");
+                AssociatedApp = AssociatedApp.Trim();
+
+                if (string.IsNullOrEmpty(AssociatedApp))
                 {
-                    case SE_ERR_FNF:
-                        throw new Exception(src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_SE_ERR_FNF);
-                    case SE_ERR_PNF:
-                        throw new Exception(src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_SE_ERR_PNF);
-                    case SE_ERR_ACCESSDENIED:
-                        throw new Exception(src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_SE_ERR_ACCESSDENIED);
-                    case SE_ERR_OOM:
-                        throw new Exception(src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_SE_ERR_OOM);
-                    case SE_ERR_NOASSOC:
-                        if (throwExceptionIfNoAssiciation)
-                        {
-                            throw new Exception(src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_SE_ERR_NOASSOC);
-                        }
-                        break;
+                    if (throwExceptionIfNoAssociation) throw new Exception(src.DirectroyAndFile.clsFileAssociation_Stringtable.FindApplication_SE_ERR_NOASSOC);
+                    return string.Empty;
                 }
-                return string.Empty;
+
+                return AssociatedApp;
             }
             catch (Exception ex)
             {

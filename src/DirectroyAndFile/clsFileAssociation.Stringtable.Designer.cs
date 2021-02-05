@@ -183,47 +183,11 @@ namespace OLKI.Tools.CommonTools.src.DirectroyAndFile {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Auf die angegebene Datei konnte nicht zugegriffen werden. ähnelt.
-        /// </summary>
-        internal static string FindApplication_SE_ERR_ACCESSDENIED {
-            get {
-                return ResourceManager.GetString("FindApplication_SE_ERR_ACCESSDENIED", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Die angegebene Datei wude nicht gefunden. ähnelt.
-        /// </summary>
-        internal static string FindApplication_SE_ERR_FNF {
-            get {
-                return ResourceManager.GetString("FindApplication_SE_ERR_FNF", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Die angebene Datei ist mit keiner Anwendung verknüpft. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Der Dateityp konnte nicht gefunden werden oder ist mit keiner Anwendung verknüpft ähnelt.
         /// </summary>
         internal static string FindApplication_SE_ERR_NOASSOC {
             get {
                 return ResourceManager.GetString("FindApplication_SE_ERR_NOASSOC", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Dem System stehen nicht genug Ressourcen oder zu wenig Arbeitsspeicher zur Verfügung. ähnelt.
-        /// </summary>
-        internal static string FindApplication_SE_ERR_OOM {
-            get {
-                return ResourceManager.GetString("FindApplication_SE_ERR_OOM", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Der angegebene Pfad ist nicht gültig. ähnelt.
-        /// </summary>
-        internal static string FindApplication_SE_ERR_PNF {
-            get {
-                return ResourceManager.GetString("FindApplication_SE_ERR_PNF", resourceCulture);
             }
         }
     }

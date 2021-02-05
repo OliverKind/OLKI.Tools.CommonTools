@@ -167,19 +167,7 @@ Falls Sie die Anwendung nicht als Administrator ausführe, versuchen Sie es bitt
 
 Möglicherweise müssen Sie Windows neu starten bevor die Änderung aktiv wird.</value>
   </data>
-  <data name="FindApplication_SE_ERR_ACCESSDENIED" xml:space="preserve">
-    <value>Auf die angegebene Datei konnte nicht zugegriffen werden.</value>
-  </data>
-  <data name="FindApplication_SE_ERR_FNF" xml:space="preserve">
-    <value>Die angegebene Datei wude nicht gefunden.</value>
-  </data>
   <data name="FindApplication_SE_ERR_NOASSOC" xml:space="preserve">
-    <value>Die angebene Datei ist mit keiner Anwendung verknüpft.</value>
-  </data>
-  <data name="FindApplication_SE_ERR_OOM" xml:space="preserve">
-    <value>Dem System stehen nicht genug Ressourcen oder zu wenig Arbeitsspeicher zur Verfügung.</value>
-  </data>
-  <data name="FindApplication_SE_ERR_PNF" xml:space="preserve">
-    <value>Der angegebene Pfad ist nicht gültig.</value>
+    <value>Der Dateityp konnte nicht gefunden werden oder ist mit keiner Anwendung verknüpft</value>
   </data>
 </root>
