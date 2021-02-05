@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("OLKI")]
 [assembly: AssemblyProduct("OLKI.Tools.CommonTools")]
-[assembly: AssemblyCopyright("Copyright ©  2020 - Oliver Kind")]
+[assembly: AssemblyCopyright("Copyright ©  2021 - Oliver Kind")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 // This sets the default COM visibility of types in the assembly to invisible.
@@ -24,6 +24,6 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can use the default the Revision and 
 // Build Numbers by using the '*' as shown below:
-[assembly: AssemblyVersion("7.0.1.18")]
-[assembly: AssemblyFileVersion("7.0.1.18")]
+[assembly: AssemblyVersion("7.1.0.19")]
+[assembly: AssemblyFileVersion("7.1.0.19")]
 [assembly: Guid("90558fe2-53a8-410f-9544-d9de861732fb")]

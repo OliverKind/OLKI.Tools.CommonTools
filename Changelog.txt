@@ -12,6 +12,13 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - N/A
 
+## [7.1.0.19] - 2021-02-06
+### Added
+- FileSize: ConvertNum
+
+### Fixed
+- FileAssociation: FindApplication does not provide stable results
+
 ## [7.0.1.18] - 2020-08-09
 ### Changed
 - Library Assemblyname: OLKI.ColorAndPicture --> OLKI.Tools.ColorAndPicture
