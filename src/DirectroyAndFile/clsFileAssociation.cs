@@ -123,14 +123,14 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         /// Matches if the specified application executable is associated with the specified file
         /// </summary>
         /// <param name="appPath">The address of a null-terminated string that specifies a application which where the specified file shold be associated with</param>
-        /// <param name="filePath">The address of a null-terminated string that specifies a file name. This file should be a document.</param>
+        /// <param name="filePathOrextension">The address of a null-terminated string that specifies a file name or only the extension</param>
         /// <returns>True if the defined application is associated wit  h the defined file</returns>
-        public static bool CheckMatchWithApplication(string appPath, string filePath)
+        public static bool CheckMatchWithApplication(string appPath, string filePathOrextension)
         {
             appPath = Path.Repair(appPath);
-            filePath = Path.Repair(filePath);
+            filePathOrextension = Path.Repair(filePathOrextension);
 
-            string FileAssociation = FindApplication(filePath);
+            string FileAssociation = FindApplication(filePathOrextension);
             if (string.IsNullOrEmpty(FileAssociation) || string.IsNullOrEmpty(appPath) || string.Compare(appPath, FileAssociation, true) != 0)
             {
                 return false;
@@ -190,6 +190,8 @@ namespace OLKI.Tools.CommonTools.DirectoryAndFile
         /// <param name="showMessageIfFileisAccociated">A boolean value it specifies if an message shold been shown if the specified file is associated to specified application</param>
         public static void CheckMatchWithApplicationAndSet(string appPath, string filePath, string extension, string applicationFiletype, string description, string iconPath, bool showMessageIfFileisAccociated)
         {
+            if (string.IsNullOrEmpty(filePath)) filePath = "." + extension;
+
             if (!CheckMatchWithApplication(appPath, filePath))
             {
                 if (MessageBox.Show(string.Format(src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0002m, new object[] { extension }), src.DirectroyAndFile.clsFileAssociation_Stringtable._0x0002c, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
