@@ -1,3 +1,7 @@
+**_This Repository is no longer being developed. It was replaced by [OLKI.Toolbox](https://github.com/OliverKind/OLKI.Toolbox)._**
+
+**_Therefore this repository has been archived._**
+
 # OLKI.Tools.CommonTools
 
 This library provides a lot of tools, I used in my other projects. It will be extended if necessary.
